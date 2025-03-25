@@ -2,9 +2,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Container from '@/Components/Utils/Container/Container';
-import { RiArrowDownSLine, RiSearchLine } from "@remixicon/react";
+import { RiArrowDownSLine, RiCloseLargeLine, RiMenu3Line, RiSearchLine } from "@remixicon/react";
 import Image from "next/image";
 import Logo from "@/assets/images/logo.svg"
+import LogoDark from "@/assets/images/logo-dark.svg"
 
 interface TnestedSubItem {
     nav_item: string;
@@ -87,97 +88,68 @@ const Header = () => {
                         <Link href="/">
                             <Image src={Logo} alt="" width={150} height={20} />
                         </Link>
-
-                        <div className="flex items-center gap-8">
-                            <nav className="hidden lg:block">
-                                <ul className="flex items-center justify-center gap-6 xl:gap-8 text-[16px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal">
-                                    {mainNav.map((item, index) => (
-                                        <li key={index} className="relative group py-2 text-neutral-300 hover:text-success-500">
-                                            <Link
-                                                href={item.link}
-                                                className="flex items-center justify-center group gap-1"
-                                            >
-                                                <span>{item.nav_item}</span>
-                                                {item.sub_item && (
-                                                    <span className="translate-y-[1.5px] group-hover:rotate-180 duration-500">
-                                                        <RiArrowDownSLine />
-                                                    </span>
-                                                )}
-                                            </Link>
+                        <nav className="hidden lg:flex items-center gap-8">
+                            <ul className="flex items-center justify-center gap-6 xl:gap-8 text-[16px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal">
+                                {mainNav.map((item, index) => (
+                                    <li key={index} className="relative group py-2 text-neutral-300 hover:text-success-500">
+                                        <Link
+                                            href={item.link}
+                                            className="flex items-center justify-center group gap-1"
+                                        >
+                                            <span>{item.nav_item}</span>
                                             {item.sub_item && (
-                                                <ul className="absolute left-0 invisible mt-3 p-5 bg-white rounded-xl w-[220px] shadow-lg group-hover:visible flex flex-col gap-3 opacity-0 translate-y-10 group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-500 ease-in-out z-20">
-                                                    <div className="w-4 h-4 bg-white rotate-45 absolute left-4 -top-1.5"></div>
-                                                    {item.sub_item.map((subItem, subIndex) => (
-                                                        <li
-                                                            key={subIndex}
-                                                            className={`${subItem.class} group relative `}
-                                                        >
-                                                            <span
-                                                                className={`${subItem.class ? "cursor-pointer" : ""
-                                                                    } "group flex items-center justify-between"`}
-                                                            >
-                                                                <Link
-                                                                    href={subItem.link}
-                                                                    className="group relative text-primary-800 hover:text-success-500"
-                                                                >
-                                                                    {subItem.nav_item}
-                                                                </Link>
-                                                                {subItem.nested_sub_item && (
-                                                                    <span className="translate-y-[1px] duration-500">
-                                                                        <RiArrowDownSLine />
-                                                                    </span>
-                                                                )}
-                                                            </span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                                <span className="translate-y-[1.5px] group-hover:rotate-180 duration-500">
+                                                    <RiArrowDownSLine />
+                                                </span>
                                             )}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </nav>
+                                        </Link>
+                                        {item.sub_item && (
+                                            <ul className="absolute left-0 invisible mt-3 p-5 bg-white rounded-xl w-[220px] shadow-lg group-hover:visible flex flex-col gap-3 opacity-0 translate-y-10 group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-500 ease-in-out z-20">
+                                                <div className="w-4 h-4 bg-white rotate-45 absolute left-4 -top-1.5"></div>
+                                                {item.sub_item.map((subItem, subIndex) => (
+                                                    <li
+                                                        key={subIndex}
+                                                        className={`${subItem.class} group relative `}
+                                                    >
+                                                        <span
+                                                            className={`${subItem.class ? "cursor-pointer" : ""
+                                                                } "group flex items-center justify-between"`}
+                                                        >
+                                                            <Link
+                                                                href={subItem.link}
+                                                                className="group relative text-primary-800 hover:text-success-500"
+                                                            >
+                                                                {subItem.nav_item}
+                                                            </Link>
+                                                            {subItem.nested_sub_item && (
+                                                                <span className="translate-y-[1px] duration-500">
+                                                                    <RiArrowDownSLine />
+                                                                </span>
+                                                            )}
+                                                        </span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
                             <button className="text-neutral-300 hover:text-success-500 cursor-pointer">
                                 <RiSearchLine size={20} />
                             </button>
-                        </div>
-                        <div className="flex lg:hidden items-center justify-center">
+                        </nav>
+                        <div className="flex lg:hidden items-center justify-center gap-5">
+                            <button className="text-neutral-300 cursor-pointer">
+                                <RiSearchLine size={20} />
+                            </button>
                             <div
                                 onClick={navHandler}
-                                className="w-9 h-9 border-[1.5px] border-neutral-300 text-neutral-300 rounded-full flex items-center justify-center cursor-pointer"
+                                className="w-9 h-9 text-neutral-300 flex items-center justify-center cursor-pointer"
                             >
                                 {active ? (
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        className="lucide lucide-x"
-                                    >
-                                        <path d="M18 6 6 18" />
-                                        <path d="m6 6 12 12" />
-                                    </svg>
+                                    <RiCloseLargeLine size={25} />
                                 ) : (
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="21"
-                                        height="21"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        className="lucide lucide-menu"
-                                    >
-                                        <line x1="4" x2="20" y1="12" y2="12" />
-                                        <line x1="4" x2="20" y1="6" y2="6" />
-                                        <line x1="4" x2="20" y1="18" y2="18" />
-                                    </svg>
+                                    <RiMenu3Line size={25} />
                                 )}
                             </div>
                         </div>
@@ -190,16 +162,16 @@ const Header = () => {
                 className={`w-full h-[100vh] flex z-20 absolute top-0 text-black duration-700 ease-out ${active ? "left-0" : "left-[-100%]"
                     }`}
             >
-                <div className="w-[65%] bg-white px-2 md:px-5 py-5 overflow-x-hidden overflow-y-scroll mobile-nav-container">
+                <div className="w-[65%] md:w-[50%] bg-white px-2 md:px-5 py-5">
                     <div className="flex items-center justify-center">
                         <Link href="/">
-                            <Image src={Logo} alt="" width={150} height={20} />
+                            <Image src={LogoDark} alt="" width={150} height={20} />
                         </Link>
                     </div>
                     <nav className="my-12">
                         <ul className="flex flex-col gap-2 text-xl font-medium">
                             {mainNav.map((item, index) => (
-                                <li key={index} className="relative group py-1 px-4 text-primary-800">
+                                <li key={index} className="relative group py-1 px-2 text-primary-800">
                                     <span
                                         className="flex items-center justify-between group"
                                     >
@@ -211,19 +183,19 @@ const Header = () => {
                                         )}
                                     </span>
                                     {item.sub_item && (
-                                        <ul className="absolute left-0 invisible mt-3 p-5 bg-secondary-400 w-full shadow-lg group-hover:visible flex flex-col gap-0 opacity-0 translate-y-10 group-hover:translate-y-3 group-hover:opacity-100 transition-all duration-300 ease-in-out z-20">
-                                            <div className="w-5 h-5 bg-secondary rotate-45 absolute left-0 right-0 mx-auto -top-1"></div>
+                                        <ul className="absolute left-0 invisible mt-0 p-5 bg-success-500 w-full rounded-xl shadow-lg group-hover:visible flex flex-col gap-0 opacity-0 translate-y-10 group-hover:translate-y-3 group-hover:opacity-100 transition-all duration-300 ease-in-out z-20">
+                                            <div className="w-5 h-5 bg-success-500 rotate-45 absolute right-[1.5%] -top-1"></div>
                                             {item.sub_item.map((subItem, subIndex) => (
                                                 <li
                                                     key={subIndex}
-                                                    className={`${subItem.class}  py-3 px-4 flex items-center justify-between text-primary-800 group relative `}
+                                                    className={`${subItem.class}  py-2 px-4 flex items-center justify-between text-neutral-200 group relative `}
                                                 >
                                                     <span
                                                         className={`${subItem.class ? "cursor-pointer" : ""
                                                             } "group flex items-center justify-between text-black"`}
                                                     >
                                                         <Link href={subItem.link}
-                                                            className="group relative hover:text-success-500"
+                                                            className="group relative hover:text-primary-800"
                                                         >
                                                             {subItem.nav_item}
                                                         </Link>
@@ -267,7 +239,7 @@ const Header = () => {
                         </ul>
                     </nav>
                 </div>
-                <div onClick={closeNavHandler} className="w-[35%] bg-[#00000060] blur-[50px] cursor-pointer"></div>
+                <div onClick={closeNavHandler} className="w-[35%] md:w-[50%] bg-transparent cursor-pointer"></div>
             </div>
         </header >
     );

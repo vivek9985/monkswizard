@@ -14,14 +14,14 @@ interface HappyCustomerWidgetProps {
 
 export default function HappyCustomerWidget({ className }: HappyCustomerWidgetProps) {
     return (
-        <div className={`flex items-center gap-[18px] ${className}`}>
+        <div className={`flex flex-col md:flex-row items-center gap-[18px] ${className}`}>
             <div className="flex items-center">
-                <Image className="w-[55px] h-[55px] rounded-full" src={HappyCustomerOne} alt="" width={55} height={55} />
-                <Image className="w-[55px] h-[55px] rounded-full -ml-[15px]" src={HappyCustomerTwo} alt="" width={55} height={55} />
-                <Image className="w-[55px] h-[55px] rounded-full -ml-[15px]" src={HappyCustomerThree} alt="" width={55} height={55} />
-                <Image className="w-[55px] h-[55px] rounded-full -ml-[15px]" src={HappyCustomerFour} alt="" width={55} height={55} />
+                <Image className="w-[45px] md:w-[55px] h-[45px] md:h-[55px] rounded-full" src={HappyCustomerOne} alt="" width={55} height={55} />
+                <Image className="w-[45px] md:w-[55px] h-[45px] md:h-[55px] rounded-full -ml-[15px]" src={HappyCustomerTwo} alt="" width={55} height={55} />
+                <Image className="w-[45px] md:w-[55px] h-[45px] md:h-[55px] rounded-full -ml-[15px]" src={HappyCustomerThree} alt="" width={55} height={55} />
+                <Image className="w-[45px] md:w-[55px] h-[45px] md:h-[55px] rounded-full -ml-[15px]" src={HappyCustomerFour} alt="" width={55} height={55} />
             </div>
-            <div>
+            <div className="text-center md:text-left">
                 <Heading variant="h5m" className="text-white">
                     750k+
                 </Heading>

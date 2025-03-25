@@ -29,15 +29,15 @@ export default function Paragraph({ children, className, variant = "para-11" }: 
                     </h2>
                     // --------20--------
                 ) : variant === "para-5" ? (
-                    <h2 className={`text-[18px] leading-[150%] font-[family-name:var(--font-outfit)] font-semibold ${className}`}>
+                    <h2 className={`text-[16px] lg:text-[18px] leading-[150%] font-[family-name:var(--font-outfit)] font-semibold ${className}`}>
                         {children}
                     </h2>
                 ) : variant === "para-6" ? (
-                    <h2 className={`text-[18px] leading-[150%] font-[family-name:var(--font-outfit)] font-medium ${className}`}>
+                    <h2 className={`text-[16px] lg:text-[18px] leading-[150%] font-[family-name:var(--font-outfit)] font-medium ${className}`}>
                         {children}
                     </h2>
                 ) : variant === "para-7" ? (
-                    <h2 className={`text-[18px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal ${className}`}>
+                    <h2 className={`text-[16px] lg:text-[18px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal ${className}`}>
                         {children}
                     </h2>
                     // --------18--------
