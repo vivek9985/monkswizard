@@ -62,6 +62,19 @@
   --color-error-800: #991b1b;
   --color-error-900: #7f1d1d;
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #05292C;
+  border: #05292C solid 1px;
+  background-clip: content-box;
+}
+
 .stroke-gradient {
   background: linear-gradient(to right, #eec800 0%, #b1f8b1 100%);
 }

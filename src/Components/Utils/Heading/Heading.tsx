@@ -15,7 +15,7 @@ export default function Heading({ children, className, variant = "h2" }: Heading
                         {children}
                     </h2>
                 ) : variant === "h2" ? (
-                    <h2 className={`text-5xl leading-[120%] font-[family-name:var(--font-clashdisplay)] font-semibold ${className}`}>
+                    <h2 className={`text-3xl md:text-4xl lg:text-5xl leading-[120%] font-[family-name:var(--font-clashdisplay)] font-semibold ${className}`}>
                         {children}
                     </h2>
                 ) : variant === "h3" ? (

@@ -1,0 +1,78 @@
+{
+    "featuredProjectData": [
+        {
+            "thumbnail": "/images/featured-project-one.png",
+            "title": "Web Design & Development",
+            "description": "As a leading digital agency, we bring expertise honed through years of experience.",
+            "link": "/"
+        },
+        {
+            "thumbnail": "/images/featured-project-two.png",
+            "title": "E-Commerce Solutions",
+            "description": "As a leading digital agency, we bring expertise honed through years of experience.",
+            "link": "/"
+        },
+        {
+            "thumbnail": "/images/featured-project-three.png",
+            "title": "Content Management",
+            "description": "As a leading digital agency, we bring expertise honed through years of experience.",
+            "link": "/"
+        },
+        {
+            "thumbnail": "/images/featured-project-four.png",
+            "title": "Support and Maintenance",
+            "description": "As a leading digital agency, we bring expertise honed through years of experience.",
+            "link": "/"
+        }
+    ],
+    "teamData": [
+        {
+            "image": "/images/team-member-one.png",
+            "name": "Owen Parker",
+            "position": "Sr. Java Engineer",
+            "style": "",
+            "social_links": {
+                "x": "https://x.com/",
+                "behance": "https://www.behance.net/",
+                "linkedin": "https://www.linkedin.com/",
+                "facebook": "https://www.facebook.com/"
+            }
+        },
+        {
+            "image": "/images/team-member-two.png",
+            "name": "Lucas Knight",
+            "position": "Web Developer",
+            "style": "xl:translate-y-[60px]",
+            "social_links": {
+                "x": "https://x.com/",
+                "behance": "https://www.behance.net/",
+                "linkedin": "https://www.linkedin.com/",
+                "facebook": "https://www.facebook.com/"
+            }
+        },
+        {
+            "image": "/images/team-member-three.png",
+            "name": "Nandi Hayes",
+            "position": "Sr. Java Engineer",
+            "style": "",
+            "social_links": {
+                "x": "https://x.com/",
+                "behance": "https://www.behance.net/",
+                "linkedin": "https://www.linkedin.com/",
+                "facebook": "https://www.facebook.com/"
+            }
+        },
+        {
+            "image": "/images/team-member-four.png",
+            "name": "Adnan Chowdhury",
+            "position": "Sr. Java Engineer",
+            "style": "xl:translate-y-[60px]",
+            "social_links": {
+                "x": "https://x.com/",
+                "behance": "https://www.behance.net/",
+                "linkedin": "https://www.linkedin.com/",
+                "facebook": "https://www.facebook.com/"
+            }
+        }
+    ]
+}

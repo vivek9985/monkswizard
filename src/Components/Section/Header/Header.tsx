@@ -104,7 +104,7 @@ const Header = () => {
                                             )}
                                         </Link>
                                         {item.sub_item && (
-                                            <ul className="absolute left-0 invisible mt-3 p-5 bg-white rounded-xl w-[220px] shadow-lg group-hover:visible flex flex-col gap-3 opacity-0 translate-y-10 group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-500 ease-in-out z-20">
+                                            <ul className="absolute left-0 invisible mt-2 p-5 bg-white rounded-xl w-[180px] shadow-lg group-hover:visible flex flex-col gap-3 opacity-0 translate-y-10 group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-500 ease-in-out z-20">
                                                 <div className="w-4 h-4 bg-white rotate-45 absolute left-4 -top-1.5"></div>
                                                 {item.sub_item.map((subItem, subIndex) => (
                                                     <li
@@ -169,7 +169,7 @@ const Header = () => {
                         </Link>
                     </div>
                     <nav className="my-12">
-                        <ul className="flex flex-col gap-2 text-xl font-medium">
+                        <ul className="flex flex-col gap-2 text-lg font-medium">
                             {mainNav.map((item, index) => (
                                 <li key={index} className="relative group py-1 px-2 text-primary-800">
                                     <span

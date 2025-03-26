@@ -12,7 +12,7 @@ export default function Footer() {
     return (
         <section className="bg-primary-700 pt-[60px]">
             <Container>
-                <div className="w-10/12 md:w-9/12 xl:max-w-[718px] mx-auto">
+                <div className="w-10/12 sm:w-7/12 md:w-7/12 lg:w-8/12 xl:max-w-[718px] mx-auto">
                     <Heading variant="h2" className="text-white text-center">
                         Get The Best Customer Service Possible
                     </Heading>
@@ -24,24 +24,24 @@ export default function Footer() {
                     </Link>
                 </div>
             </Container>
-            <div className="bg-primary-500 w-full h-px my-[100px]"></div>
+            <div className="bg-primary-500 w-full h-px my-[60px] md:my-[70px] xl:my-[100px]"></div>
             <Container>
-                <div className="flex justify-between">
-                    <div className="w-[316px]">
+                <div className="flex flex-col gap-y-12 xl:flex-row justify-between">
+                    <div className="max-w-[316px]">
                         <Link href="/" className="w-fit block">
                             <Image src={Logo} alt="" width={160} height={36} />
                         </Link>
-                        <Paragraph variant="para-7" className="max-w-[274px] text-neutral-400 mt-2">
+                        <Paragraph variant="para-7" className="max-w-[274px] text-neutral-400 mt-3">
                             An digital agency plays a crucial role in transforming digital spaces
                         </Paragraph>
-                        <form className="w-full border-[1px] border-neutral-700 text-neutral-400 rounded-[8px] px-3 py-2.5 relative mt-11">
+                        <form className="w-full border-[1px] border-neutral-700 text-neutral-400 rounded-[8px] px-3 py-2.5 relative mt-8 xl:mt-11">
                             <input className="w-full focus:outline-none" placeholder="Your Email" type="email" required />
                             <button type="submit" className="absolute right-3 top-0 bottom-0 my-auto cursor-pointer">
                                 <Image src={Mail} alt="" width={20} height={20} />
                             </button>
                         </form>
                     </div>
-                    <div className="flex justify-between w-[729px]">
+                    <div className="flex flex-wrap gap-10 justify-between xl:w-[729px]">
                         <div className="flex flex-col gap-3">
                             <Paragraph variant="para-9" className="text-white">
                                 Quick Link
@@ -179,11 +179,8 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-primary-500 w-full h-px mt-[69px]"></div>
-                <div className="flex items-center justify-between pt-6 pb-7">
-                    <Paragraph variant="para-11" className="text-neutral-400">
-                        © 2024 MonksWizard. All rights reserved.
-                    </Paragraph>
+                <div className="bg-primary-500 w-full h-px mt-10 xl:mt-[69px]"></div>
+                <div className="flex flex-col md:flex-row-reverse gap-y-3 items-center justify-between pt-6 pb-7">
                     <div className="flex items-center gap-2">
                         <Link href="/terms-condition">
                             <Paragraph variant="para-11" className="text-neutral-400">
@@ -199,6 +196,9 @@ export default function Footer() {
                             </Paragraph>
                         </Link>
                     </div>
+                    <Paragraph variant="para-11" className="text-neutral-400">
+                        © 2024 MonksWizard. All rights reserved.
+                    </Paragraph>
                 </div>
             </Container>
         </section>
