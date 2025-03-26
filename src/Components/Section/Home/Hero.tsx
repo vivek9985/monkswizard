@@ -21,16 +21,14 @@ export default function Hero() {
             <Container>
                 <div className="flex flex-col gap-y-10 md:gap-y-[60px] xl:flex-row items-center justify-between">
                     <div className="w-10/12 md:w-9/12 xl:max-w-[604px]">
-                        <Badge className="mx-auto xl:ml-0">
-                            Best Digital Agency & Development
-                        </Badge>
+                        <Badge className="mx-auto xl:ml-0">Best Digital Agency & Development</Badge>
                         <Heading variant="h1" className="text-white text-center xl:text-left mt-4 mb-5">
                             Transforming Ideas into⚡️Digital Success Stories with us ✨
                         </Heading>
                         <Paragraph variant="para-7" className="text-center xl:text-left text-neutral-300">
                             We specialize in crafting dynamic digital solutions that propel businesses forward in the ever-evolving digital landscape. Our team of experts.
                         </Paragraph>
-                        <PrimaryButton className="mx-auto xl:ml-0 mt-10">Get Started</PrimaryButton>
+                        <PrimaryButton className="mx-auto translate-x-[-17px] xl:translate-x-0 xl:ml-0 mt-10">Get Started</PrimaryButton>
                         <HappyCustomerWidget className="w-fit mx-auto xl:ml-0 mt-[50px]" />
                     </div>
                     <div className="max-w-[280px] sm:max-w-[320px] md:max-w-[400px] xl:max-w-[445px] flex items-center justify-center relative">

@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/Components/Section/Header/Header";
+import Footer from "@/Components/Section/Footer/Footer";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -48,6 +49,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
