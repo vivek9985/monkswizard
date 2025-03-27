@@ -74,5 +74,22 @@
                 "facebook": "https://www.facebook.com/"
             }
         }
+    ],
+    "ourBenifits": [
+        {
+            "image": "/images/icons/document.svg",
+            "name": "Expertise",
+            "position": "As a leading digital agency, we bring expertise honed through years of experience in navigating the ever-evolving."
+        },
+        {
+            "image": "/images/icons/light.svg",
+            "name": "Creativity",
+            "position": "By leveraging our comprehensive suite of services,including web design,development digital marketing."
+        },
+        {
+            "image": "/images/icons/car.svg",
+            "name": "Timely Delivery",
+            "position": "Development to digital marketing and beyond, we're dedicated to elevating your brand's online presence and driving."
+        }
     ]
 }

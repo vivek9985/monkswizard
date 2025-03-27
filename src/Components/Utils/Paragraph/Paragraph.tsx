@@ -11,20 +11,20 @@ export default function Paragraph({ children, className, variant = "para-11" }: 
         <>
             {
                 variant === "para-1" ? (
-                    <h2 className={`text-[24px] leading-[150%] font-[family-name:var(--font-outfit)] font-medium ${className}`}>
+                    <h2 className={`text-[20px] xl:text-[24px] leading-[150%] font-[family-name:var(--font-outfit)] font-medium ${className}`}>
                         {children}
                     </h2>
                 ) : variant === "para-2" ? (
-                    <h2 className={`text-[24px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal ${className}`}>
+                    <h2 className={`text-[20px] xl:text-[24px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal ${className}`}>
                         {children}
                     </h2>
                     // --------24--------
                 ) : variant === "para-3" ? (
-                    <h2 className={`text-[20px] leading-[118%] font-[family-name:var(--font-outfit)] font-semibold ${className}`}>
+                    <h2 className={`text-[18px] xl:text-[20px] leading-[118%] font-[family-name:var(--font-outfit)] font-semibold ${className}`}>
                         {children}
                     </h2>
                 ) : variant === "para-4" ? (
-                    <h2 className={`text-[20px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal ${className}`}>
+                    <h2 className={`text-[18px] xl:text-[20px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal ${className}`}>
                         {children}
                     </h2>
                     // --------20--------
