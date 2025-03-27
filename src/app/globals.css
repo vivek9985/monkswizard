@@ -75,9 +75,6 @@
   background-clip: content-box;
 }
 
-.stroke-gradient {
-  background: linear-gradient(to right, #eec800 0%, #b1f8b1 100%);
-}
 
 /* Header styles */
 .menu-active {

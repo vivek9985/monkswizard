@@ -12,12 +12,12 @@ export default function Team() {
     return (
         <section className="bg-white py-20 md:py-[100px] xl:pt-[120px] xl:pb-[180px]">
             <Container>
-                <div className="w-10/12 sm:w-8/12 md:w-8/12 xl:max-w-[754px] mx-auto">
+                <div className="w-10/12 sm:w-8/12 md:w-8/12 xl:max-w-[674px] mx-auto">
                     <Badge variant="light" className="mx-auto">Our Team</Badge>
                     <Heading variant="h2" className="text-primary-900 text-center my-4">
                         Our Special Team Member
                     </Heading>
-                    <Paragraph variant="para-11" className="max-w-[602px] mx-auto text-center text-neutral-700">
+                    <Paragraph variant="para-11" className="max-w-[674px] mx-auto text-center text-neutral-700">
                         We offer a comprehensive suite of digital services tailored to meet the diverse needs of our clients. From web design and development to digital marketing and branding
                     </Paragraph>
                 </div>

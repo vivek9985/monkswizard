@@ -75,7 +75,7 @@
             }
         }
     ],
-    "ourBenifits": [
+    "ourBenifitsData": [
         {
             "image": "/images/icons/document.svg",
             "name": "Expertise",
@@ -90,6 +90,36 @@
             "image": "/images/icons/car.svg",
             "name": "Timely Delivery",
             "position": "Development to digital marketing and beyond, we're dedicated to elevating your brand's online presence and driving."
+        }
+    ],
+    "caseStudiesData": [
+        {
+            "image": "/images/service-one.webp",
+            "title": "SEO Optimization",
+            "category": "Brand Identity Website",
+            "description": "From SEO to social media marketing, we create data-driven strategies that enhance your visibility, engage your audience, and increase conversions.",
+            "link": "/"
+        },
+        {
+            "image": "/images/service-two.webp",
+            "title": "E-commerce",
+            "category": "Website Development",
+            "description": "We create high-performing, user-friendly e-commerce websites that boost sales, enhance customer experiences, and drive growth.",
+            "link": "/"
+        },
+        {
+            "image": "/images/service-three.webp",
+            "title": "Brand Identity",
+            "category": "Brand Identity",
+            "description": "Your brand is more than just a logo—it's the face of your business. Our branding experts help you build a strong identity.",
+            "link": "/"
+        },
+        {   
+            "image": "/images/service-four.webp",
+            "title": "Online Management",
+            "category": "Design Direction",
+            "description": "We manage online marketing strategies that increase brand visibility, drive traffic, and boost customer engagement effectively.",
+            "link": "/"
         }
     ]
 }
