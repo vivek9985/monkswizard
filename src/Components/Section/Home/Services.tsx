@@ -36,7 +36,7 @@ export default function Services() {
                                 <Paragraph variant="para-11" className="text-neutral-50 mt-3">
                                     SEO optimization, and targeted digital marketing campaigns, we helped Client & increase their online sales by 150% within the first six months. Our team &apos;s expertise in user experience.
                                 </Paragraph>
-                                <Link href="/services" className="mt-8 xl:mt-12">
+                                <Link href="/services" className="mt-8 xl:mt-12 block w-fit">
                                     <PrimaryButton className="mt-12">View Details</PrimaryButton>
                                 </Link>
                             </div>

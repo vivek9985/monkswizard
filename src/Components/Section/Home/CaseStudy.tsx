@@ -24,8 +24,8 @@ export default function CaseStudy() {
                     ))
                 }
             </div>
-            <Link href="/case-study">
-                <PrimaryButton className="w-fit mx-auto mt-10 md:mt-12">
+            <Link href="/case-study" className="block w-fit mx-auto  mt-10 md:mt-12">
+                <PrimaryButton>
                     View All Works
                 </PrimaryButton>
             </Link>
