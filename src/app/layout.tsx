@@ -12,26 +12,11 @@ const outfit = Outfit({
 
 const clashdisplay = localFont({
   src: [
-    {
-      path: "../assets/fonts/ClashDisplay-Light.ttf",
-      weight: "300",
-    },
-    {
-      path: "../assets/fonts/ClashDisplay-Regular.ttf",
-      weight: "400",
-    },
-    {
-      path: "../assets/fonts/ClashDisplay-Medium.ttf",
-      weight: "500",
-    },
-    {
-      path: "../assets/fonts/ClashDisplay-Semibold.ttf",
-      weight: "600",
-    },
-    {
-      path: "../assets/fonts/ClashDisplay-Bold.ttf",
-      weight: "700",
-    },
+    { path: "../assets/fonts/ClashDisplay-Light.ttf", weight: "300" },
+    { path: "../assets/fonts/ClashDisplay-Regular.ttf", weight: "400" },
+    { path: "../assets/fonts/ClashDisplay-Medium.ttf", weight: "500" },
+    { path: "../assets/fonts/ClashDisplay-Semibold.ttf", weight: "600" },
+    { path: "../assets/fonts/ClashDisplay-Bold.ttf", weight: "700" },
   ],
   variable: "--font-clashdisplay",
 });
@@ -39,14 +24,17 @@ const clashdisplay = localFont({
 export const metadata: Metadata = {
   title: "Monks Wizard",
   description: "Digital Agency",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.png",
+    shortcut: "/favicon.svg",
+  },
 };
 
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${outfit.variable} ${clashdisplay.variable} antialiased`}
-      >
+      <body className={`${outfit.variable} ${clashdisplay.variable} antialiased`}>
         <Header />
         {children}
         <Footer />
