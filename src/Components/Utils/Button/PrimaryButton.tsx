@@ -11,7 +11,7 @@ interface PrimaryButtonProps {
 
 export default function PrimaryButton({ children, className, variant }: PrimaryButtonProps) {
     return (
-        <button className={`w-fit flex items-center cursor-pointer relative group ${className}`}>
+        <button className={`w-fit flex items-center cursor-pointer select-none relative group ${className}`}>
             <div className={`border-neutral-300 group-hover:border-transparent group-hover:bg-transparent duration-300 py-[14px] pl-6 pr-8 rounded-[44px] ${variant === "green" ? "bg-success-600" : "bg-transparent border-[1px]"}`}>
                 <Paragraph variant="para-10" className="text-neutral-50 group-hover:text-primary-500 duration-300 relative left-0 z-10">
                     {children}

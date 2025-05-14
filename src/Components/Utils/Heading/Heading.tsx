@@ -3,14 +3,18 @@ import React from "react";
 interface HeadingProps {
     children: React.ReactNode;
     className?: string;
-    variant?: "h1" | "h2" | "h3" | "h4" | "h4m" | "h5" | "h5m" | "h6";
+    variant?: "large" | "h1" | "h2" | "h3" | "h4" | "h4m" | "h5" | "h5m" | "h6";
 }
 
 export default function Heading({ children, className, variant = "h2" }: HeadingProps) {
     return (
         <>
             {
-                variant === "h1" ? (
+                variant === "large" ? (
+                    <h2 className={`text-[32px] md:text-[40px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] leading-[110%] font-[family-name:var(--font-clashdisplay)] font-semibold ${className}`}>
+                        {children}
+                    </h2>
+                ) : variant === "h1" ? (
                     <h2 className={`text-[32px] md:text-[40px] xl:text-[56px] leading-[120%] font-[family-name:var(--font-clashdisplay)] font-semibold ${className}`}>
                         {children}
                     </h2>

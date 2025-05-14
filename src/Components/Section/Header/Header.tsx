@@ -6,20 +6,22 @@ import { RiArrowDownSLine, RiCloseLargeLine, RiMenu3Line, RiSearchLine } from "@
 import Image from "next/image";
 import Logo from "@/assets/images/logo.svg"
 import LogoDark from "@/assets/images/logo-dark.svg"
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface TnestedSubItem {
     nav_item: string;
-    link: string;
+    link?: string;
 }
 interface TsubItem {
     nav_item: string;
-    link: string;
+    link?: string;
     class?: string;
     nested_sub_item?: TnestedSubItem[];
 }
 interface TmainNav {
     nav_item: string;
-    link: string;
+    link?: string;
     sub_item?: TsubItem[];
 }
 
@@ -29,7 +31,7 @@ const mainNav: TmainNav[] = [
         nav_item: "Home",
         link: "/",
         sub_item: [
-            { nav_item: "Home 01", link: "home" },
+            { nav_item: "Home 01", link: "/" },
             { nav_item: "Home 02", link: "home-2" },
         ],
     },
@@ -37,7 +39,7 @@ const mainNav: TmainNav[] = [
         nav_item: "Pages",
         link: "#",
         sub_item: [
-            { nav_item: "About Us", link: "about-us" },
+            { nav_item: "About Us", link: "about" },
             {
                 nav_item: "Case Study",
                 link: "case-study",
@@ -50,7 +52,7 @@ const mainNav: TmainNav[] = [
     },
     {
         nav_item: "Services",
-        link: "seervice",
+        link: "services",
     },
     {
         nav_item: "Blog",
@@ -63,6 +65,8 @@ const mainNav: TmainNav[] = [
 ];
 
 const Header = () => {
+    const pathname = usePathname()
+    const router = useRouter()
     const [active, setActive] = useState(false);
     useEffect(() => {
         if (active) {
@@ -85,43 +89,44 @@ const Header = () => {
             <div className="px-5 md:px-0 w-full h-[75px] flex items-center justify-center absolute z-10 left-auto right-auto top-0">
                 <Container>
                     <div className="flex items-center justify-between">
-                        <Link href="/">
-                            <Image src={Logo} alt="" width={150} height={20} />
-                        </Link>
+                        <div onClick={() => router.push("/")} className="cursor-pointer">
+                            {pathname === "/home-2" ?
+                                <Image src={LogoDark} alt="" width={150} height={20} />
+                                :
+                                <Image src={Logo} alt="" width={150} height={20} />}
+                        </div>
                         <nav className="hidden lg:flex items-center gap-8">
                             <ul className="flex items-center justify-center gap-6 xl:gap-8 text-[16px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal">
                                 {mainNav.map((item, index) => (
-                                    <li key={index} className="relative group py-2 text-neutral-300 hover:text-success-500">
-                                        <Link
-                                            href={item.link}
-                                            className="flex items-center justify-center group gap-1"
-                                        >
-                                            <span>{item.nav_item}</span>
-                                            {item.sub_item && (
+                                    <li key={index} className={`relative group py-2 text-neutral-300 cursor-pointer hover:text-success-500 ${pathname === "/home-2" && "text-neutral-700"}`}>
+                                        <span onClick={() => router.push(`/${item?.link}`)} className="flex items-center justify-center group gap-1">
+
+                                            <span>{item?.nav_item}</span>
+                                            {item?.sub_item && (
                                                 <span className="translate-y-[1.5px] group-hover:rotate-180 duration-500">
                                                     <RiArrowDownSLine />
                                                 </span>
                                             )}
-                                        </Link>
-                                        {item.sub_item && (
+                                        </span>
+                                        {item?.sub_item && (
                                             <ul className="absolute left-0 invisible mt-2 p-5 bg-white rounded-xl w-[180px] shadow-lg group-hover:visible flex flex-col gap-3 opacity-0 translate-y-10 group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-500 ease-in-out z-20">
                                                 <div className="w-4 h-4 bg-white rotate-45 absolute left-4 -top-1.5"></div>
-                                                {item.sub_item.map((subItem, subIndex) => (
+                                                {item?.sub_item.map((subItem, subIndex) => (
                                                     <li
                                                         key={subIndex}
-                                                        className={`${subItem.class} group relative `}
+                                                        className={`${subItem?.class} group relative `}
                                                     >
                                                         <span
-                                                            className={`${subItem.class ? "cursor-pointer" : ""
+                                                            className={`${subItem?.class ? "cursor-pointer" : ""
                                                                 } "group flex items-center justify-between"`}
                                                         >
-                                                            <Link
-                                                                href={subItem.link}
+                                                            <span
+                                                                onClick={() => router.push(`/${subItem?.link}`)}
                                                                 className="group relative text-primary-800 hover:text-success-500"
                                                             >
-                                                                {subItem.nav_item}
-                                                            </Link>
-                                                            {subItem.nested_sub_item && (
+                                                                {subItem?.nav_item}
+                                                            </span>
+                                                            {subItem?.nested_sub_item && (
                                                                 <span className="translate-y-[1px] duration-500">
                                                                     <RiArrowDownSLine />
                                                                 </span>
@@ -134,17 +139,17 @@ const Header = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className="text-neutral-300 hover:text-success-500 cursor-pointer">
+                            <button className={`text-neutral-300 hover:text-success-500 cursor-pointer ${pathname === "/home-2" && "text-neutral-700"}`}>
                                 <RiSearchLine size={20} />
                             </button>
                         </nav>
-                        <div className="flex lg:hidden items-center justify-center gap-5">
-                            <button className="text-neutral-300 cursor-pointer">
-                                <RiSearchLine size={20} />
+                        <div className="flex lg:hidden items-center justify-center gap-2">
+                            <button className={`w-9 h-9 text-neutral-300 flex items-center justify-center cursor-pointer ${pathname === "/home-2" && "text-neutral-700"}`}>
+                                <RiSearchLine size={25} />
                             </button>
                             <div
                                 onClick={navHandler}
-                                className="w-9 h-9 text-neutral-300 flex items-center justify-center cursor-pointer"
+                                className={`w-9 h-9 text-neutral-300 flex items-center justify-center cursor-pointer ${pathname === "/home-2" && "text-neutral-700"}`}
                             >
                                 {active ? (
                                     <RiCloseLargeLine size={25} />
@@ -175,56 +180,56 @@ const Header = () => {
                                     <span
                                         className="flex items-center justify-between group"
                                     >
-                                        <Link href={item.link}>{item.nav_item}</Link>
-                                        {item.sub_item && (
+                                        <span onClick={() => router.push(`/${item?.link}`)} className="cursor-pointer">{item?.nav_item}</span>
+                                        {item?.sub_item && (
                                             <span className="translate-y-[1px] group-hover:rotate-180 duration-500">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6" /></svg>
                                             </span>
                                         )}
                                     </span>
-                                    {item.sub_item && (
+                                    {item?.sub_item && (
                                         <ul className="absolute left-0 invisible mt-0 p-5 bg-success-500 w-full rounded-xl shadow-lg group-hover:visible flex flex-col gap-0 opacity-0 translate-y-10 group-hover:translate-y-3 group-hover:opacity-100 transition-all duration-300 ease-in-out z-20">
                                             <div className="w-5 h-5 bg-success-500 rotate-45 absolute right-[1.5%] -top-1"></div>
-                                            {item.sub_item.map((subItem, subIndex) => (
+                                            {item?.sub_item.map((subItem, subIndex) => (
                                                 <li
                                                     key={subIndex}
-                                                    className={`${subItem.class}  py-2 px-4 flex items-center justify-between text-neutral-200 group relative `}
+                                                    className={`${subItem?.class}  py-2 px-4 flex items-center justify-between text-neutral-200 group relative`}
                                                 >
                                                     <span
-                                                        className={`${subItem.class ? "cursor-pointer" : ""
+                                                        className={`${subItem?.class ? "cursor-pointer" : ""
                                                             } "group flex items-center justify-between text-black"`}
                                                     >
-                                                        <Link href={subItem.link}
-                                                            className="group relative hover:text-primary-800"
+                                                        <span onClick={() => router.push(`/${subItem?.link}`)}
+                                                            className="group relative hover:text-primary-800 cursor-pointer"
                                                         >
-                                                            {subItem.nav_item}
-                                                        </Link>
+                                                            {subItem?.nav_item}
+                                                        </span>
                                                     </span>
-                                                    {subItem.nested_sub_item && (
+                                                    {subItem?.nested_sub_item && (
                                                         <span className="translate-y-[1px] duration-500 arrow">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6" /></svg>
                                                         </span>
                                                     )}
 
                                                     {
-                                                        subItem.nested_sub_item && (
+                                                        subItem?.nested_sub_item && (
                                                             <ul className="bg-neutral1 p-5 absolute left-0 right-0 mx-auto top-[53px] invisible w-full shadow-lg flex flex-col gap-2 opacity-0 transition-all duration-200 ease-in-out -ml-[10px] z-10">
-                                                                {subItem.nested_sub_item.map(
+                                                                {subItem?.nested_sub_item.map(
                                                                     (nestedItem, nestedIndex) => (
-                                                                        <Link
+                                                                        <span
                                                                             key={nestedIndex}
-                                                                            href={nestedItem.link}
-                                                                            className="text-white transition-all duration-300 py-3 px-4 hover:bg-secondary"
+                                                                            onClick={() => router.push(`/${nestedItem?.link}`)}
+                                                                            className="text-white transition-all duration-300 py-3 px-4 cursor-pointer hover:bg-secondary"
                                                                         >
                                                                             <span
 
                                                                                 className="group text-white relative"
                                                                             >
                                                                                 <span className="relative">
-                                                                                    {nestedItem.nav_item}
+                                                                                    {nestedItem?.nav_item}
                                                                                 </span>
                                                                             </span>
-                                                                        </Link>
+                                                                        </span>
                                                                     )
                                                                 )}
                                                             </ul>
