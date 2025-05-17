@@ -70,13 +70,14 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #05292C;
-  border: #05292C solid 1px;
+  background: #05292c;
+  border: #05292c solid 1px;
   background-clip: content-box;
 }
-
 
 /* Header styles */
 .menu-active {
   overflow: hidden;
 }
+
+
