@@ -114,11 +114,37 @@
             "description": "Your brand is more than just a logo—it's the face of your business. Our branding experts help you build a strong identity.",
             "link": "/"
         },
-        {   
+        {
             "image": "/images/service-four.webp",
             "title": "Online Management",
             "category": "Design Direction",
             "description": "We manage online marketing strategies that increase brand visibility, drive traffic, and boost customer engagement effectively.",
+            "link": "/"
+        }
+    ],
+    "services": [
+        {
+            "image": "/images/home-2-service-1.png",
+            "title": "Explore Diverse Skillset",
+            "description": "Even though winter is coming to an end, it's never too late to jump.",
+            "link": "/"
+        },
+        {
+            "image": "/images/home-2-service-2.png",
+            "title": "See Expertise in Action",
+            "description": "Highlight any specialized expertise or industry-specific knowledge.",
+            "link": "/"
+        },
+        {
+            "image": "/images/home-2-service-3.png",
+            "title": "How Drive Results",
+            "description": "Explain the process or methodology the agency follows when providing.",
+            "link": "/"
+        },
+        {
+            "image": "/images/home-2-service-4.png",
+            "title": "Digital Potential",
+            "description": "Clearly list and describe the services offer by the agency. This may include.",
             "link": "/"
         }
     ]

@@ -12,7 +12,7 @@ export default function About() {
     return (
         <section className="bg-white py-20 md:py-[100px] xl:py-[120px]">
             <Container>
-                <Badge variant="light" className="mx-auto">About Us</Badge>
+                <Badge variant="light" className="mx-auto rounded-lg">About Us</Badge>
                 <Heading variant="h2" className="max-w-[548px] mx-auto text-primary-900 text-center mt-4">
                     Learn More About Our Digital Story
                 </Heading>

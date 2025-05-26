@@ -1,13 +1,19 @@
 import About from "@/Components/Section/Home2/About";
 import Hero from "@/Components/Section/Home2/Hero";
+import OurBenefits from "@/Components/Section/Home2/OurBenefits";
 import Project from "@/Components/Section/Home2/Project";
+import FeaturedProject from "@/Components/Section/Home2/FeaturedProject";
+import Service from "@/Components/Section/Home2/Service";
 
 export default function HomeTwoPage() {
   return (
     <main>
       <Hero />
       <About />
+      <FeaturedProject />
+      <OurBenefits />
       <Project />
+      <Service />
     </main>
   );
 }

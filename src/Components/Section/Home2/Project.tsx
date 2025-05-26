@@ -8,6 +8,7 @@ import ProjectOne from "@/assets/images/home-2-project-1.png";
 import ProjectTwo from "@/assets/images/home-2-project-2.png";
 import ProjectThree from "@/assets/images/home-2-project-3.png";
 import { RiArrowRightUpLongLine } from "@remixicon/react";
+import LinkButton from "@/Components/Utils/Button/LinkButton";
 
 export default function Project() {
     return (
@@ -20,9 +21,11 @@ export default function Project() {
                             Our Project
                         </Heading>
                     </div>
-                    {/* <div className="bg-red-300">
-                        <PrimaryButton variant="green">View Details</PrimaryButton>
-                    </div> */}
+                    <div className="">
+                        <LinkButton variant="secondary">
+                            View Detais
+                        </LinkButton>
+                    </div>
                 </div>
                 <div className="mt-[60px]">
                     <div className="w-full h-[596px] rounded-[20px] group relative overflow-hidden">
