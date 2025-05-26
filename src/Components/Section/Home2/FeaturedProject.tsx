@@ -2,12 +2,8 @@ import Container from "@/Components/Utils/Container/Container";
 import Heading from "@/Components/Utils/Heading/Heading";
 import Paragraph from "@/Components/Utils/Paragraph/Paragraph";
 import Badge from "@/Components/Utils/Badge/Badge";
-import PrimaryButton from "@/Components/Utils/Button/PrimaryButton";
 import Image from "next/image";
 import ProjectOne from "@/assets/images/home-2-project-1.png";
-import ProjectTwo from "@/assets/images/home-2-project-2.png";
-import ProjectThree from "@/assets/images/home-2-project-3.png";
-import { RiArrowRightUpLongLine } from "@remixicon/react";
 
 export default function FeaturedProject() {
     return (
