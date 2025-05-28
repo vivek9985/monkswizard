@@ -1,3 +1,4 @@
+"use client";
 import Container from "@/Components/Utils/Container/Container";
 import Heading from "@/Components/Utils/Heading/Heading";
 import Paragraph from "@/Components/Utils/Paragraph/Paragraph";
@@ -7,11 +8,13 @@ import Logo from "@/assets/images/logo.svg";
 import Mail from "@/assets/images/icons/mail.svg";
 import Link from "next/link";
 import { RiFacebookFill, RiLinkedinFill, RiMailLine, RiPhoneLine, RiTwitterFill, RiVimeoFill } from "@remixicon/react";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+    const pathname = usePathname()
     return (
         <section className="bg-primary-700 pt-[60px]">
-            <Container>
+            <Container className={`${pathname === "/404" && "hidden"}`}>
                 <div className="w-10/12 sm:w-7/12 md:w-7/12 lg:w-8/12 xl:max-w-[718px] mx-auto">
                     <Heading variant="h2" className="text-white text-center">
                         Get The Best Customer Service Possible
@@ -24,7 +27,7 @@ export default function Footer() {
                     </Link>
                 </div>
             </Container>
-            <div className="bg-primary-500 w-full h-px my-[60px] md:my-[70px] xl:my-[100px]"></div>
+            <div className={`bg-primary-500 w-full h-px my-[60px] md:my-[70px] xl:my-[100px] ${pathname === "/404" && "hidden"}`}></div>
             <Container>
                 <div className="flex flex-col gap-y-12 xl:flex-row justify-between">
                     <div className="max-w-[316px]">

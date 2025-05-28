@@ -7,6 +7,12 @@ import OurBenefits from "@/Components/Section/Common/OurBenefits";
 import Testimonial from "@/Components/Section/Common/Testimonial";
 import CaseStudy from "@/Components/Section/Home/CaseStudy";
 import Services from "@/Components/Section/Home/Services";
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "MonksWizard - Home",
+};
 
 export default function HomePage() {
   return (

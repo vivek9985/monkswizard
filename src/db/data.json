@@ -147,5 +147,103 @@
             "description": "Clearly list and describe the services offer by the agency. This may include.",
             "link": "/"
         }
+    ],
+    "accordion": [
+        {
+            "initialEntered": true,
+            "title": "What types of services do you offer?",
+            "description": "We offer a comprehensive suite of digital services including Web Development, Digital Marketing, Branding, UI/UX Design, Content Creation, Mobile App Development, and E-commerce Solutions. Each service is designed to empower your online presence and drive your business forward.",
+            "type": "sales&billings"
+        },
+        {
+            "initialEntered": false,
+            "title": "Can I get a custom pricing plan?",
+            "description": "Yes, we offer custom pricing tailored to your needs. Contact our sales team for personalized solutions and quotes.",
+            "type": "sales&billings"
+        },
+        {
+            "initialEntered": false,
+            "title": "Are there any additional or hidden fees?",
+            "description": "No, all fees are disclosed upfront. If applicable, taxes or additional charges will be clearly outlined during the checkout process.",
+            "type": "sales&billings"
+        },
+        {
+            "initialEntered": false,
+            "title": "Can I upgrade or downgrade my plan at any time?",
+            "description": "Yes, plans can be upgraded or downgraded at any time. Any changes will be reflected in your next billing cycle.",
+            "type": "sales&billings"
+        },
+        {
+            "initialEntered": false,
+            "title": "What should I do if my payment fails?",
+            "description": "If your payment fails, check your card details or contact your bank. Alternatively, try another payment method or contact our support team.",
+            "type": "sales&billings"
+        },
+        {
+            "initialEntered": true,
+            "title": "What should I do if my payment fails?",
+            "description": "If your payment fails, check your card details or contact your bank. Alternatively, try another payment method or contact our support team.",
+            "type": "projectprocess"
+        },
+        {
+            "initialEntered": false,
+            "title": "How long does it take to complete a project?",
+            "description": "The timeline depends on the project's complexity and scope. For instance, small projects may take 2–4 weeks, while larger projects can take several months. We provide a detailed timeline during the planning phase to ensure clarity and alignment.",
+            "type": "projectprocess"
+        },
+        {
+            "initialEntered": false,
+            "title": "What if I want changes during the project?",
+            "description": "We allow for revisions during specific stages of the process, such as the design and testing phases. However, significant changes outside the agreed scope may require a formal change request, which could affect the timeline and budget.",
+            "type": "projectprocess"
+        },
+        {
+            "initialEntered": false,
+            "title": "How do you ensure the project meets my expectations?",
+            "description": "We involve you at every major milestone, providing regular updates and seeking your feedback. This collaborative approach ensures that the project aligns with your vision. We also conduct thorough testing and quality assurance before delivery.",
+            "type": "projectprocess"
+        },
+        {
+            "initialEntered": false,
+            "title": "How do you ensure the project meets my expectations?",
+            "description": "We involve you at every major milestone, providing regular updates and seeking your feedback. This collaborative approach ensures that the project aligns with your vision. We also conduct thorough testing and quality assurance before delivery.",
+            "type": "projectprocess"
+        },
+        {
+            "initialEntered": false,
+            "title": "What happens after the project is completed?",
+            "description": "Once the project is delivered, we offer post-launch support to address any issues and provide updates as needed. We also offer ongoing maintenance packages for long-term support and enhancements.",
+            "type": "projectprocess"
+        },
+        {
+            "initialEntered": true,
+            "title": "What is the typical timeline for a project from start to finish?",
+            "description": "A typical project timeline varies based on complexity but generally includes phases like planning, development, testing, and deployment. Small projects might take weeks, while larger ones could span several months. Clear communication and milestones help ensure timely completion.",
+            "type": "refundpolicy"
+        },
+        {
+            "initialEntered": false,
+            "title": "How do you ensure clear communication and collaboration throughout the project?",
+            "description": "We ensure clear communication and collaboration through regular updates, scheduled meetings, and utilizing tools like Slack, Trello, or Jira. These keep everyone aligned on goals, progress, and any changes needed during the project.",
+            "type": "refundpolicy"
+        },
+        {
+            "initialEntered": false,
+            "title": "What steps are involved in the design and development process?",
+            "description": "The design and development process starts with understanding requirements and creating designs. This is followed by building functionality, thorough testing, and deployment. Each step ensures the project meets its goals effectively.",
+            "type": "refundpolicy"
+        },
+        {
+            "initialEntered": false,
+            "title": "How do you handle revisions and feedback during the project?",
+            "description": "We handle revisions and feedback by maintaining open communication, implementing changes promptly, and ensuring alignment with project goals. Regular reviews allow for continuous improvements throughout the process.",
+            "type": "refundpolicy"
+        },
+        {
+            "initialEntered": false,
+            "title": "What deliverables can we expect at the end of each phase?",
+            "description": "At the end of each phase, you can expect specific deliverables such as requirement documents from planning, prototypes or designs from the design phase, functional features from development, and a tested, ready-to-deploy product upon completion.",
+            "type": "refundpolicy"
+        }
     ]
 }

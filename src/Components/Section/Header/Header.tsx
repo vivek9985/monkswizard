@@ -90,7 +90,7 @@ const Header = () => {
                 <Container>
                     <div className="flex items-center justify-between">
                         <div onClick={() => router.push("/")} className="cursor-pointer">
-                            {pathname === "/home-2" ?
+                            {(pathname === "/404" || pathname === "/home-2") ?
                                 <Image src={LogoDark} alt="" width={150} height={20} />
                                 :
                                 <Image src={Logo} alt="" width={150} height={20} />}
@@ -98,7 +98,7 @@ const Header = () => {
                         <nav className="hidden lg:flex items-center gap-8">
                             <ul className="flex items-center justify-center gap-6 xl:gap-8 text-[16px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal">
                                 {mainNav.map((item, index) => (
-                                    <li key={index} className={`relative group py-2 text-neutral-300 cursor-pointer hover:text-success-500 ${pathname === "/home-2" && "text-neutral-700"}`}>
+                                    <li key={index} className={`relative group py-2  cursor-pointer hover:text-success-500 ${(pathname === "/404" || pathname === "/home-2") ? "text-neutral-700" : "text-neutral-300"}`}>
                                         <span onClick={() => router.push(`/${item?.link}`)} className="flex items-center justify-center group gap-1">
 
                                             <span>{item?.nav_item}</span>
@@ -139,7 +139,7 @@ const Header = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className={`text-neutral-300 hover:text-success-500 cursor-pointer ${pathname === "/home-2" && "text-neutral-700"}`}>
+                            <button className={`text-neutral-300 hover:text-success-500 cursor-pointer $ ${(pathname === "/404" || pathname === "/home-2") ? "text-neutral-700" : "text-neutral-300"}`}>
                                 <RiSearchLine size={20} />
                             </button>
                         </nav>

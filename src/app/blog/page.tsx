@@ -1,4 +1,10 @@
 import PageHeader from "@/Components/Utils/PageHeader";
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "MonksWizard - Blog",
+};
 
 export default function BlogPage() {
   return (

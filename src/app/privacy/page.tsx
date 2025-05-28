@@ -1,5 +1,11 @@
 import PageHeader from "@/Components/Utils/PageHeader";
 import Privacy from "@/Components/Section/Privacy/Privacy";
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "MonksWizard - Privacy Policy",
+};
 
 export default function PrivacyPage() {
   return (

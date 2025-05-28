@@ -4,6 +4,12 @@ import OurBenefits from "@/Components/Section/Home2/OurBenefits";
 import Project from "@/Components/Section/Home2/Project";
 import FeaturedProject from "@/Components/Section/Home2/FeaturedProject";
 import Service from "@/Components/Section/Home2/Service";
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "MonksWizard - Home 02",
+};
 
 export default function HomeTwoPage() {
   return (

@@ -1,5 +1,11 @@
 import PageHeader from "@/Components/Utils/PageHeader";
 import Terms from "@/Components/Section/Terms/Terms";
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "MonksWizard - Terms and Conditions",
+};
 
 export default function TermsPage() {
   return (
