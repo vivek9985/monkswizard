@@ -1,9 +1,9 @@
 "use client";
 import { Accordion } from "@szhsin/react-accordion";
 import CustomAccordion from "@/Components/Utils/CustomAccordion";
-import Paragraph from "@/Components/Utils/Paragraph/Paragraph";
 import { useState } from "react";
 import Data from "@/db/data.json";
+import GreenButton from "@/Components/Utils/Button/GreenButton";
 
 const buttonOptions = [
     { label: "Sales & Billings", value: "sales&billings" },
@@ -22,14 +22,17 @@ export default function Faq() {
         <div className="max-w-[815px] mx-auto my-[110px]">
             <div className="flex items-center justify-center gap-1">
                 {buttonOptions.map(({ label, value }) => (
-                    <button
-                        key={value}
+                    <div
                         onClick={() => setActiveButton(value)}
-                        className={`bg-neutral-100 hover:bg-success-500 text-neutral-500 hover:text-white px-7 py-2 rounded-3xl cursor-pointer duration-300 ${activeButton === value ? "bg-success-500 text-white" : ""
-                            }`}
+                        key={value}
                     >
-                        <Paragraph variant="para-11">{label}</Paragraph>
-                    </button>
+                        <GreenButton
+                            className={`${activeButton === value ? "bg-success-500 text-white" : ""
+                                }`}
+                        >
+                            {label}
+                        </GreenButton>
+                    </div>
                 ))}
             </div>
 
