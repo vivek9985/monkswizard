@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function BlogDetailsPage() {
     return (
-        <section>
+        <section className="px-4 xl:px-0">
             <div className="max-w-[800px] mx-auto pt-[160px] pb-[110px]">
                 <Badge variant="light">February 10, 2024</Badge>
                 <Heading variant="h2" className="mt-3 mb-12">A Marketing Campaign Based on Experiential Learning</Heading>
@@ -103,7 +103,7 @@ export default function BlogDetailsPage() {
             </div>
             <Container className="pb-[110px]">
                 <Heading variant="h2" className="text-center">Recent Blog</Heading>
-                <div className="grid grid-cols-3 gap-8 mt-12">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-8 mt-12">
                     {
                         Data?.blog?.slice(0, 3).map((item, i) => (
                             <BlogWidget key={i}

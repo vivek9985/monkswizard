@@ -29,7 +29,7 @@ export default function Project() {
                 </div>
                 <div className="mt-[60px]">
                     <div className="w-full h-[596px] rounded-[20px] group relative overflow-hidden">
-                        <Image className="w-full h-full duration-300 group-hover:scale-105" src={ProjectOne} alt="" width={1140} height={596} />
+                        <Image className="w-full h-full object-cover duration-300 group-hover:scale-105" src={ProjectOne} alt="" width={1140} height={596} />
                         <div className="max-w-[603px] py-[26px] px-[29px] border-[1px] border-[#E7E7E775] absolute left-8 bottom-7 bg-[#AFEEBA16] backdrop-blur-2xl rounded-[20px]">
                             <Heading variant="h3" className="text-white">Introducing Our Digital Success Stories</Heading>
                             <Paragraph variant="para-11" className="mt-1 mb-7 text-white">Development to digital marketing and beyond, we&apos;re dedicated to elevating your brand&apos;s online presence and driving.</Paragraph>

@@ -37,7 +37,7 @@ const mainNav: TmainNav[] = [
     },
     {
         nav_item: "Pages",
-        link: "#",
+        link: "/",
         sub_item: [
             { nav_item: "About Us", link: "about" },
             {
@@ -90,15 +90,15 @@ const Header = () => {
                 <Container>
                     <div className="flex items-center justify-between">
                         <div onClick={() => router.push("/")} className="cursor-pointer">
-                            {(pathname === "/404" || pathname === "/home-2") ?
-                                <Image src={LogoDark} alt="" width={150} height={20} />
+                            {(pathname === "/" || pathname === "/about" || pathname === "/case-study" || pathname === "/faq" || pathname === "/privacy" || pathname === "/terms" || pathname === "/case-study" || pathname === "/services" || pathname === "/blog" || pathname === "/contact") ?
+                                <Image src={Logo} alt="" width={150} height={20} />
                                 :
-                                <Image src={Logo} alt="" width={150} height={20} />}
+                                <Image src={LogoDark} alt="" width={150} height={20} />}
                         </div>
                         <nav className="hidden lg:flex items-center gap-8">
                             <ul className="flex items-center justify-center gap-6 xl:gap-8 text-[16px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal">
                                 {mainNav.map((item, index) => (
-                                    <li key={index} className={`relative group py-2  cursor-pointer hover:text-success-500 ${(pathname === "/404" || pathname === "/home-2") ? "text-neutral-700" : "text-neutral-300"}`}>
+                                    <li key={index} className={`relative group py-2  cursor-pointer hover:text-success-500 ${(pathname === "/" || pathname === "/about" || pathname === "/case-study" || pathname === "/faq" || pathname === "/privacy" || pathname === "/terms" || pathname === "/case-study" || pathname === "/services" || pathname === "/blog" || pathname === "/contact") ? "text-neutral-300" : "text-neutral-700"}`}>
                                         <span onClick={() => router.push(`/${item?.link}`)} className="flex items-center justify-center group gap-1">
 
                                             <span>{item?.nav_item}</span>
@@ -109,20 +109,19 @@ const Header = () => {
                                             )}
                                         </span>
                                         {item?.sub_item && (
-                                            <ul className="absolute left-0 invisible mt-2 p-5 bg-white rounded-xl w-[180px] shadow-lg group-hover:visible flex flex-col gap-3 opacity-0 translate-y-10 group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-500 ease-in-out z-20">
-                                                <div className="w-4 h-4 bg-white rotate-45 absolute left-4 -top-1.5"></div>
-                                                {item?.sub_item.map((subItem, subIndex) => (
+                                            <ul className="absolute left-0 invisible mt-2 p-5 bg-neutral-100 rounded-xl w-[180px] shadow-lg group-hover:visible flex flex-col gap-3 opacity-0 translate-y-10 group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-500 ease-in-out z-20 border-b-[4px] border-success-500 cursor-default">
+                                                <div className="w-4 h-4 bg-neutral-100 rotate-45 absolute left-4 -top-1.5"></div>
+                                                {item?.sub_item?.map((subItem, subIndex) => (
                                                     <li
                                                         key={subIndex}
-                                                        className={`${subItem?.class} group relative `}
+                                                        className="group relative"
                                                     >
                                                         <span
-                                                            className={`${subItem?.class ? "cursor-pointer" : ""
-                                                                } "group flex items-center justify-between"`}
+                                                            className="group flex items-center justify-between"
                                                         >
                                                             <span
                                                                 onClick={() => router.push(`/${subItem?.link}`)}
-                                                                className="group relative text-primary-800 hover:text-success-500"
+                                                                className="group relative cursor-pointer text-primary-800 hover:text-success-500"
                                                             >
                                                                 {subItem?.nav_item}
                                                             </span>
@@ -139,17 +138,17 @@ const Header = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className={`text-neutral-300 hover:text-success-500 cursor-pointer $ ${(pathname === "/404" || pathname === "/home-2") ? "text-neutral-700" : "text-neutral-300"}`}>
+                            <button className={`text-neutral-300 hover:text-success-500 cursor-pointer ${(pathname === "/" || pathname === "/about" || pathname === "/case-study" || pathname === "/faq" || pathname === "/privacy" || pathname === "/terms" || pathname === "/case-study" || pathname === "/services" || pathname === "/blog" || pathname === "/contact")  ? "text-neutral-300" : "text-neutral-700"}`}>
                                 <RiSearchLine size={20} />
                             </button>
                         </nav>
                         <div className="flex lg:hidden items-center justify-center gap-2">
-                            <button className={`w-9 h-9 text-neutral-300 flex items-center justify-center cursor-pointer ${pathname === "/home-2" && "text-neutral-700"}`}>
+                            <button className={`w-9 h-9 text-neutral-300 flex items-center justify-center cursor-pointer ${(pathname === "/" || pathname === "/about" || pathname === "/case-study" || pathname === "/faq" || pathname === "/privacy" || pathname === "/terms" || pathname === "/case-study" || pathname === "/services" || pathname === "/blog" || pathname === "/contact") ? "text-neutral-300" : "text-neutral-700"}`}>
                                 <RiSearchLine size={25} />
                             </button>
                             <div
                                 onClick={navHandler}
-                                className={`w-9 h-9 text-neutral-300 flex items-center justify-center cursor-pointer ${pathname === "/home-2" && "text-neutral-700"}`}
+                                className={`w-9 h-9 text-neutral-300 flex items-center justify-center cursor-pointer ${(pathname === "/" || pathname === "/about" || pathname === "/case-study" || pathname === "/faq" || pathname === "/privacy" || pathname === "/terms" || pathname === "/case-study" || pathname === "/services" || pathname === "/blog" || pathname === "/contact") ? "text-neutral-300" : "text-neutral-700"}`}
                             >
                                 {active ? (
                                     <RiCloseLargeLine size={25} />

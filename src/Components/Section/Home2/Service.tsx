@@ -7,7 +7,7 @@ import ServiceCardTwo from "@/Components/Card/ServiceCardTwo";
 
 export default function Service() {
     return (
-        <section className="bg-white py-20 md:py-[100px] xl:pt-[120px] xl:pb-[180px]">
+        <section className="bg-white py-15 md:py-20 lg:py-[100px] xl:py-[120px]">
             <Container>
                 <div className="w-10/12 sm:w-8/12 md:w-8/12 xl:max-w-[674px] mx-auto">
                     <Badge variant="light" className="mx-auto rounded-lg">Our Services</Badge>
@@ -18,7 +18,7 @@ export default function Service() {
                         The Services section of a digital agency website should provide clear and comprehensive information about the agency&apos;s offerings.
                     </Paragraph>
                 </div>
-                <div className="w-7/12 sm:w-6/12 md:w-9/12 lg:w-8/12 xl:w-full mx-auto grid md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-5 xl:gap-6 mt-10 md:mt-[60px]">
+                <div className="w-9/12 sm:w-6/12 md:w-9/12 lg:w-8/12 xl:w-full mx-auto grid md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-5 xl:gap-6 mt-10 md:mt-[60px]">
                     {
                         Data?.services?.map((item, i) => (
                             <ServiceCardTwo key={i} image={item?.image} title={item?.title} description={item?.description} link={item?.link} />

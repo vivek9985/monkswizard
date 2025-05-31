@@ -11,8 +11,8 @@ export default function OurBenefits() {
     return (
         <section className="bg-white py-20 md:py-[100px] xl:py-[120px]">
             <Container>
-                <div className="flex flex-col gap-y-10 md:gap-y-[60px] lg:gap-y-0 xl:flex-row items-center justify-between">
-                    <div className="w-10/12 md:w-9/12 xl:max-w-[509px]">
+                <div className="flex flex-col gap-y-10 md:gap-y-12 lg:gap-y-[60px] xl:gap-y-0 xl:flex-row items-center justify-between">
+                    <div className="w-11/12 md:w-9/12 xl:max-w-[509px]">
                         <Badge variant="light" className="mx-auto xl:ml-0 rounded-lg">Our Benefits</Badge>
                         <Heading variant="h2" className="text-primary-900 text-center xl:text-left my-4">
                             Pioneering Your Digital Success with Strengths
@@ -24,7 +24,7 @@ export default function OurBenefits() {
                             <PrimaryButton><span className="text-neutral-700">View Details</span></PrimaryButton>
                         </Link>
                     </div>
-                    <div className="w-[532px] grid grid-cols-2 gap-6">
+                    <div className="w-9/12 lg:max-w-[532px] grid sm:grid-cols-2 gap-6">
                         <OurBenefitCard
                             icon={IconOne}
                             title="Creativity"

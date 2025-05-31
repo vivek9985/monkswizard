@@ -16,7 +16,11 @@ export default function Hero() {
                     <Paragraph variant="para-7" className="max-w-[1021px] mx-auto text-center text-neutral-700">
                         We specialize in providing cutting-edge digital solutions tailored to meet the unique needs of our clients. With a team of skilled professionals adept in areas such as web design, development, digital marketing, and branding
                     </Paragraph>
-                    <PrimaryButton variant="green" className="mx-auto mt-7 lg:mt-10 -translate-x-5">Get Started</PrimaryButton>
+                    <PrimaryButton className="mx-auto mt-7 lg:mt-10 -translate-x-5">
+                        <p className="text-neutral-700">
+                            Get Started
+                        </p>
+                    </PrimaryButton>
                 </div>
             </div>
             <div className="pt-10 md:pt-14 lg:pt-24 xl:pt-[90px] w-full relative">

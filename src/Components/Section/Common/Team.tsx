@@ -41,7 +41,6 @@ export default function Team() {
                     <Image className="w-[40px] md:w-[51px] absolute left-[-52px] hidden xl:block xl:bottom-[-20%]" src={HalfCircle} alt="" width={51} height={51} />
                     <Image className="w-12 md:w-[65px] absolute right-[-35px] top-[-56px]" src={Spring} alt="" width={65} height={56} />
                 </div>
-
             </Container>
         </section>
     );
