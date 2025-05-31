@@ -28,7 +28,7 @@ export default function FeaturedProject() {
             </Container>
             <div className="mt-12 xl:mt-[60px] overflow-x-hidden">
                 <Marquee speed={100}>
-                    {[1, 2, 3, 4, 5].map((i) => (
+                    {[1, 2, 3, 4, 5, 6 ,7].map((i) => (
                         <div key={i} className="w-[300] h-[224px] rounded-[20px] group relative overflow-hidden mr-6">
                             <Image className="w-full h-full object-cover duration-300 group-hover:scale-105" src={ProjectOne} alt="" width={320} height={224} />
                             <div className="w-full h-full flex item-center justify-center py-9 px-6 absolute left-0 top-0">
