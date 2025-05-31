@@ -1,3 +1,4 @@
+import ServiceMarquee from "@/Components/Section/Common/ServiceMarquee";
 import Content from "@/Components/Section/Services/Content";
 import Faq from "@/Components/Section/Services/Faq";
 import Hero from "@/Components/Section/Services/Hero";
@@ -13,6 +14,7 @@ export default function ServicesPage() {
     <main>
       <Hero />
       <Content />
+      <ServiceMarquee />
       <Faq />
     </main>
   );

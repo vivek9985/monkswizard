@@ -20,7 +20,7 @@ export default function FeaturedProject() {
                 </div>
                 <div className="w-9/12 sm:w-7/12 md:w-10/12 lg:w-8/12 xl:w-full mx-auto grid md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-4 xl:gap-6 mt-10 md:mt-[60px]">
                     {
-                        Data?.featuredProjectData?.map((item, i) => (
+                        Data?.featuredProjectData?.slice(0, 4).map((item, i) => (
                             <FeaturedProjectCard
                                 key={i}
                                 thumbnail={item?.thumbnail}

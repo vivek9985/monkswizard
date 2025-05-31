@@ -23,6 +23,42 @@
             "title": "Support and Maintenance",
             "description": "As a leading digital agency, we bring expertise honed through years of experience.",
             "link": "/"
+        },
+        {
+            "thumbnail": "/images/featured-project-five.png",
+            "title": "Social Media Marketing",
+            "description": "As a leading digital agency, we bring expertise honed through years of experience.",
+            "link": "/"
+        },
+        {
+            "thumbnail": "/images/featured-project-one.png",
+            "title": "Web Design & Development",
+            "description": "As a leading digital agency, we bring expertise honed through years of experience.",
+            "link": "/"
+        },
+        {
+            "thumbnail": "/images/featured-project-two.png",
+            "title": "E-Commerce Solutions",
+            "description": "As a leading digital agency, we bring expertise honed through years of experience.",
+            "link": "/"
+        },
+        {
+            "thumbnail": "/images/featured-project-three.png",
+            "title": "Content Management",
+            "description": "As a leading digital agency, we bring expertise honed through years of experience.",
+            "link": "/"
+        },
+        {
+            "thumbnail": "/images/featured-project-four.png",
+            "title": "Support and Maintenance",
+            "description": "As a leading digital agency, we bring expertise honed through years of experience.",
+            "link": "/"
+        },
+        {
+            "thumbnail": "/images/featured-project-five.png",
+            "title": "Social Media Marketing",
+            "description": "As a leading digital agency, we bring expertise honed through years of experience.",
+            "link": "/"
         }
     ],
     "teamData": [

@@ -6,6 +6,7 @@ import FeaturedProject from "@/Components/Section/Home2/FeaturedProject";
 import Service from "@/Components/Section/Home2/Service";
 import OurTeam from "@/Components/Section/Home2/OurTeam";
 import type { Metadata } from "next";
+import ServiceMarquee from "@/Components/Section/Common/ServiceMarquee";
 
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function HomeTwoPage() {
     <main>
       <Hero />
       <About />
+      <ServiceMarquee />
       <FeaturedProject />
       <OurBenefits />
       <Project />

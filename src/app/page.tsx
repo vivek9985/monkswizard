@@ -8,6 +8,7 @@ import Testimonial from "@/Components/Section/Common/Testimonial";
 import CaseStudy from "@/Components/Section/Home/CaseStudy";
 import Services from "@/Components/Section/Home/Services";
 import type { Metadata } from "next";
+import ServiceMarquee from "@/Components/Section/Common/ServiceMarquee";
 
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <FeaturedProject />
+      <ServiceMarquee />
       <Services />
       <Video />
       <CaseStudy />
