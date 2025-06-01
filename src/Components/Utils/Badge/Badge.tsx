@@ -1,4 +1,3 @@
-import React from "react";
 import ThunderGreenIcon from "@/assets/images/icons/thunder-green.svg";
 import Image from "next/image";
 import Paragraph from "../Paragraph/Paragraph";
