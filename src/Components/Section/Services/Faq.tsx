@@ -9,7 +9,7 @@ export default function Faq() {
     const filteredData = Data?.accordion?.filter((item) => item.type === "sales&billings");
 
     return (
-        <div className="max-w-[815px] mx-auto my-[110px]">
+        <div className="max-w-[815px] mx-auto my-[110px] px-4 lg:px-0">
             <div className="text-center">
                 <Badge variant="light" className="mx-auto">FAQ</Badge>
                 <Heading variant="h2" className="max-w-[650px] mx-auto text-black mt-2 mb-4">
@@ -20,7 +20,7 @@ export default function Faq() {
                 </Paragraph>
             </div>
 
-            <Accordion transition transitionTimeout={300} className="flex flex-col gap-6 mt-12">
+            <Accordion transition transitionTimeout={300} className="flex flex-col gap-4 md:gap-6 mt-9 md:mt-12">
                 {filteredData?.map(({ title, description, initialEntered }, index) => (
                     <CustomAccordion key={index} header={title} initialEntered={initialEntered}>
                         {description}

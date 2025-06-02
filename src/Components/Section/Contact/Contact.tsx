@@ -25,9 +25,9 @@ export default function Contact() {
         setSelect(prev => !prev);
     }
     return (
-        <section className="bg-white py-[110px]">
-            <Container className="flex justify-between">
-                <div className="w-[463px] bg-primary-500 py-[37px] rounded-lg relative">
+        <section className="bg-white py-20 md:py-24 lg:py-[110px]">
+            <Container className="flex flex-col justify-center items-center gap-10 md:gap-7 lg:gap-10 md:flex-row lg:justify-between">
+                <div className="w-full md:w-1/2 lg:w-[463px] bg-primary-500 py-7 lg:py-[37px] rounded-3xl relative">
                     <div className="flex flex-col items-center justify-center pb-4">
                         <div className="w-[193px] h-[193px] rounded-tl-[60px] rounded-tr-[20px] rounded-br-[20px] bg-[linear-gradient(118deg,#EEC800_-9%,#229954_61.4475%,#B1F8B1_100%)] overflow-hidden">
                             <Image className="w-full h-full object-cover object-center rounded-tl-[60px] rounded-tr-[20px] rounded-br-[20px] p-1" src={ContactProfile} alt="" width={193} height={193} />
@@ -41,7 +41,7 @@ export default function Contact() {
                             </Paragraph>
                         </div>
                     </div>
-                    <div className="px-[52px]">
+                    <div className="px-9 lg:px-[52px] text-center md:text-left">
                         <Heading variant="h4" className="text-white">
                             Schedule a call with us to find out if we can help you!
                         </Heading>
@@ -51,12 +51,12 @@ export default function Contact() {
                     </div>
                     <Image className="absolute left-0 top-0 w-full h-auto object-cover rounded-tl-[60px] rounded-tr-[20px] rounded-br-[20px] p-1" src={AbsoluteImage} alt="" width={193} height={193} />
                 </div>
-                <div className="w-[636px]">
-                    <Heading variant="h1" className="text-black">
+                <div className="w-full md:w-1/2 lg:w-[636px]">
+                    <Heading variant="h1" className="text-black text-center md:text-left">
                         Get in Touch
                     </Heading>
-                    <form className="mt-10">
-                        <div className="grid grid-cols-2 gap-5">
+                    <form className="mt-7 md:mt-10">
+                        <div className="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-5">
                             <PrimaryInput label="Name" placeholder="Name here" />
                             <PrimaryInput label="E-mail " placeholder="E-mail here" />
                         </div>

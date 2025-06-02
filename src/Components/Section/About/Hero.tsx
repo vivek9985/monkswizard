@@ -1,3 +1,4 @@
+"use client";
 import Container from "@/Components/Utils/Container/Container";
 import Heading from "@/Components/Utils/Heading/Heading";
 import Paragraph from "@/Components/Utils/Paragraph/Paragraph";
@@ -10,8 +11,12 @@ import CircleButton from "@/Components/Utils/Button/CircleButton";
 import HeroOne from "@/assets/images/about-hero-1.png";
 import HeroTwo from "@/assets/images/about-hero-2.png";
 import HeroThree from "@/assets/images/about-hero-3.png";
+import { useState } from "react";
+import { RiCloseLargeLine } from "@remixicon/react";
 
 export default function Hero() {
+    const [openVideo, setOpenVideo] = useState(false);
+
     return (
         <section className="bg-primary-600 pt-[155px] pb-[64px] bg-no-repeat bg-cover bg-top" style={{ backgroundImage: `url(${HeroBgImage.src})` }}>
             <Container>
@@ -31,12 +36,35 @@ export default function Hero() {
                         <Image src={HeroOne} alt="" width={294} height={307} />
                         <div className="max-w-[280px] sm:max-w-[320px] md:max-w-[400px] xl:max-w-[484px] flex items-center justify-center relative">
                             <Image src={HeroTwo} alt="" width={445} height={533} />
-                            <CircleButton className="scale-90 absolute -right-[23%] sm:-right-[20%] md:-right-[15%] xl:-right-[6%] top-[-13%]" />
+                            <div onClick={() => setOpenVideo(true)}>
+                                <CircleButton className="scale-90 absolute -right-[23%] sm:-right-[20%] md:-right-[15%] xl:-right-[6%] top-[-13%]" />
+                            </div>
                         </div>
                         <Image src={HeroThree} alt="" width={294} height={307} />
                     </div>
                 </div>
             </Container>
+            {
+                openVideo && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+                        <div className="w-11/12 md:w-8/12 xl:w-[1010px]">
+                            <video
+                                className="w-full" controls autoPlay loop muted >
+                                <source
+                                    src="https://framerusercontent.com/assets/jiTEi6tiCiabzCOkSxzCTWnwwE.mp4"
+                                    type="video/mp4"
+                                />
+                                Your browser does not support the video tag.
+                            </video>
+                            <div className="absolute top-10 right-12 text-white cursor-pointer"
+                                onClick={() => setOpenVideo(false)}
+                            >
+                                <RiCloseLargeLine size={24} />
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
         </section>
     );
 }

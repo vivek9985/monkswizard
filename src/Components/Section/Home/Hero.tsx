@@ -1,3 +1,4 @@
+"use client"
 import Container from "@/Components/Utils/Container/Container";
 import Heading from "@/Components/Utils/Heading/Heading";
 import Paragraph from "@/Components/Utils/Paragraph/Paragraph";
@@ -14,8 +15,11 @@ import LogoipsumTwo from "@/assets/images/logoipsum-2.svg";
 import LogoipsumThree from "@/assets/images/logoipsum-3.svg";
 import LogoipsumFour from "@/assets/images/logoipsum-4.svg";
 import LogoipsumFive from "@/assets/images/logoipsum-5.svg";
+import { useState } from "react";
+import { RiCloseLargeLine } from "@remixicon/react";
 
 export default function Hero() {
+    const [openVideo, setOpenVideo] = useState(false);
     return (
         <section className="bg-primary-600 pt-[155px] pb-[64px] bg-no-repeat bg-cover bg-top" style={{ backgroundImage: `url(${HeroBgImage.src})` }}>
             <Container>
@@ -34,7 +38,9 @@ export default function Hero() {
                     <div className="max-w-[280px] sm:max-w-[320px] md:max-w-[400px] xl:max-w-[445px] flex items-center justify-center relative">
                         <Image src={HeroImage} alt="" width={445} height={533} />
                         <Image className="w-[50px] sm:w-[60px] md:w-[80px] xl:w-[92px] absolute -right-[9%] bottom-[11%] [animation:upDown_2s_ease-in-out_infinite]" src={HalfCircle} alt="" width={92} height={92} />
-                        <CircleButton className="scale-[0.65] md:scale-[0.85] xl:scale-100 absolute -left-[23%] sm:-left-[20%] md:-left-[15%] xl:-left-[14%] top-[10%]" />
+                        <div onClick={() => setOpenVideo(true)}>
+                            <CircleButton className="scale-[0.65] md:scale-[0.85] xl:scale-100 absolute -left-[23%] sm:-left-[20%] md:-left-[15%] xl:-left-[14%] top-[10%]" />
+                        </div>
                     </div>
                 </div>
             </Container>
@@ -49,6 +55,27 @@ export default function Hero() {
                     <Image className="object-contain h-8 lg:h-10" src={LogoipsumFive} alt="" width={182} height={40} />
                 </div>
             </div>
+                {
+                    openVideo && (
+                        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+                            <div className="w-11/12 md:w-8/12 xl:w-[1010px]">
+                                <video
+                                className="w-full" controls autoPlay loop muted >
+                                <source
+                                    src="https://framerusercontent.com/assets/jiTEi6tiCiabzCOkSxzCTWnwwE.mp4"
+                                    type="video/mp4"
+                                />
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div className="absolute top-10 right-12 text-white cursor-pointer"
+                                    onClick={() => setOpenVideo(false)}
+                                    >
+                                    <RiCloseLargeLine size={24} />
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
         </section>
     );
 }

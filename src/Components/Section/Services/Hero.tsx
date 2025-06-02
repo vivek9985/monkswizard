@@ -28,13 +28,13 @@ export default function Hero() {
                 </div>
             </Container>
             <div className="mb-20 relative">
-                <Container className="grid grid-cols-3 mt-20 relative z-10 shadow-[8px_12px_68px_rgba(0,0,0,0.05)]">
-                    <ServiceCard className="rounded-tl-2xl" underClassName="rounded-tl-2xl" icon={IconOne} title="Development" paragraph="Thousands of Developer" />
+                <Container className="grid sm:grid-cols-2 lg:grid-cols-3 mt-20 relative z-10 shadow-[8px_12px_68px_rgba(0,0,0,0.05)]">
+                    <ServiceCard className="lg:rounded-tl-2xl" underClassName="lg:rounded-tl-2xl" icon={IconOne} title="Development" paragraph="Thousands of Developer" />
                     <ServiceCard icon={IconOne} title="Design" paragraph="Thousands of Developer" />
-                    <ServiceCard className="rounded-tr-2xl" underClassName="rounded-tr-2xl" icon={IconOne} title="QA/Testing" paragraph="Thousands of Developer" />
-                    <ServiceCard className="rounded-bl-2xl" underClassName="rounded-bl-2xl group-hover:rounded-bl-[0px]" icon={IconOne} title="Creatives" paragraph="Thousands of Developer" />
+                    <ServiceCard className="lg:rounded-tr-2xl" underClassName="lg:rounded-tr-2xl" icon={IconOne} title="QA/Testing" paragraph="Thousands of Developer" />
+                    <ServiceCard className="lg:rounded-bl-2xl" underClassName="lg:rounded-bl-2xl group-hover:rounded-bl-[0px]" icon={IconOne} title="Creatives" paragraph="Thousands of Developer" />
                     <ServiceCard icon={IconOne} title="Marketing" paragraph="Thousands of Developer" />
-                    <ServiceCard className="rounded-br-2xl" underClassName="rounded-br-2xl group-hover:rounded-br-[0px]" icon={IconOne} title="Research" paragraph="Thousands of Developer" />
+                    <ServiceCard className="lg:rounded-br-2xl" underClassName="lg:rounded-br-2xl group-hover:rounded-br-[0px]" icon={IconOne} title="Research" paragraph="Thousands of Developer" />
                 </Container>
                 <div className="w-full h-[50%] bg-white absolute left-0 bottom-0 z-0"></div>
             </div>

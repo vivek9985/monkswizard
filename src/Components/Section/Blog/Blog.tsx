@@ -22,9 +22,9 @@ export default function Blog() {
     const [activeBlog, setActiveBlog] = useState(Data?.blog);
 
     return (
-        <section className="my-[110px]">
+        <section className="py-20 lg:py-24 xl:py-[110px]">
             <Container>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center flex-col-reverse gap-y-5 lg:flex-row lg:justify-between">
                     <Heading variant="h1" className="text-black">Blog/Articles</Heading>
                     <form className="w-[275px] flex justify-between border-[2px] border-neutral-100 rounded-[34px] p-1 pl-4">
                         <input type="serch" placeholder="Search here" required className="w-[calc(100%-45px)] focus:outline-none text-neutral-700 text-lg leading-[150%] font-[family-name:var(--font-outfit)] pr-1" />
@@ -33,7 +33,7 @@ export default function Blog() {
                         </button>
                     </form>
                 </div>
-                <div className="flex items-center gap-1 my-12">
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-1 my-12">
                     {buttonOptions?.map(({ label, value }) => (
                         <div
                             onClick={() => {
@@ -51,7 +51,7 @@ export default function Blog() {
                         </div>
                     ))}
                 </div>
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 xl:gap-8">
                     {
                         activeBlog?.map((item, i) => (
                             <BlogWidget key={i}

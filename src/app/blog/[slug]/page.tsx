@@ -23,16 +23,16 @@ export const metadata: Metadata = {
 
 export default function BlogDetailsPage() {
     return (
-        <section className="px-4 xl:px-0">
-            <div className="max-w-[800px] mx-auto pt-[160px] pb-[110px]">
-                <Badge variant="light">February 10, 2024</Badge>
-                <Heading variant="h2" className="mt-3 mb-12">A Marketing Campaign Based on Experiential Learning</Heading>
-                <div className="w-full h-[456px] rounded-3xl overflow-hidden">
+        <section className="py-26 md:py-32 xl:pt-[160px] xl:pb-[110px] px-4 xl:px-0">
+            <div className="max-w-[800px] mx-auto">
+                <Badge variant="light" className="mx-auto md:ml-0">February 10, 2024</Badge>
+                <Heading variant="h2" className="mt-3 mb-9 md:mb-12 text-center md:text-left">A Marketing Campaign Based on Experiential Learning</Heading>
+                <div className="w-full h-[300px] md:h-[456px] rounded-3xl overflow-hidden">
                     <Image className="w-full h-full object-cover" src={BlogThumbnail} alt="" width={776} height={456} />
                 </div>
-                <div className="flex items-center justify-between gap-4 py-5 border-b-[1px] border-neutral-300">
+                <div className="flex flex-wrap items-center justify-between gap-4 py-5 border-b-[1px] border-neutral-300">
                     <div className="flex items-center gap-5">
-                        <div className="w-[74px] h-[74px] rounded-full overflow-hidden">
+                        <div className="w-12 md:w-16 lg:w-[74px] h-12 md:h-16 lg:h-[74px] rounded-full overflow-hidden">
                             <Image className="w-full h-full object-cover" src={profile} alt="" width={74} height={74} />
                         </div>
                         <div className="flex flex-col justify-center">
@@ -55,7 +55,7 @@ export default function BlogDetailsPage() {
                         </Link>
                     </div>
                 </div>
-                <div className="flex flex-col gap-5 my-12">
+                <div className="flex flex-col gap-5 my-9 md:my-12">
                     <Heading variant="h5">The most common business debate isn’t as black and white as you might think</Heading>
                     <Paragraph variant="para-11" className="text-neutral-700">We&apos;re dedicated to helping businesses thrive in the ever-evolving digital landscape. As a leading digital agency, we specialize in providing comprehensive solutions that drive results and exceed expectations. Our team of skilled professionals brings together expertise in web design, development, digital marketing, and branding to deliver tailored strategies that align with our clients&apos; goals and objectives. Whether you&apos;re looking to enhance your online presence, increase brand awareness, or drive conversions, we have the knowledge, experience, and creativity to make it happen.</Paragraph>
                     <Paragraph variant="para-11" className="text-neutral-700">From innovative website designs that captivate audiences to data-driven marketing campaigns that generate leads, we&apos;re committed to delivering measurable results that propel our clients&apos; success. At [Agency Name], we&apos;re more than just a service provider – we&apos;re your trusted partner in navigating the digital realm and achieving your business goals. Let&apos;s embark on this journey together and unlock the full potential of your digital presence.Digital marketing is a multifaceted approach to promoting businesses and brands online, reaching and engaging with target audiences through various digital channels. At we specialize in providing comprehensive digital marketing solutions tailored to meet the unique needs and objectives of our clients.</Paragraph>
@@ -95,13 +95,13 @@ export default function BlogDetailsPage() {
                     </div>
                     <Paragraph variant="para-11" className="text-neutral-700 mt-5">From innovative website designs that captivate audiences to data-driven marketing campaigns that generate leads, we&apos;re committed to delivering measurable results that propel our client&apos;s success. At [Agency Name], we&apos;re more than just a service provider - we&apos;re your trusted partner in navigating the digital realm and achieving your business goals. Let&apos;s embark on this journey together and unlock the full potential of your digital presence.Digital marketing is a multifaceted approach to promoting businesses and brands online, reaching and engaging with target audiences through various digital channels. At we specialize in providing comprehensive digital marketing solutions tailored to meet the unique needs and objectives of our clients.</Paragraph>
                 </div>
-                <div className="text-center py-[50px] px-[89px] rounded-lg overflow-hidden border-l-[4px] border-success-500 bg-neutral-100 mt-14">
+                <div className="text-center py-8 md:py-10 lg:py-[50px] px-12 md:px-16 lg:px-20 xl:px-[89px] rounded-lg overflow-hidden border-l-[4px] border-success-500 bg-neutral-100 mt-9 md:mt-14">
                     <Heading variant="h5m">
                         “Unleashing your brand&apos;s potential and leaving a lasting impression on your audience begins with a deep understanding of your brand identity and what distinguished you from competitors.”
                     </Heading>
                 </div>
             </div>
-            <Container className="pb-[110px]">
+            <Container className="mt-9 md:mt-12">
                 <Heading variant="h2" className="text-center">Recent Blog</Heading>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-8 mt-12">
                     {
