@@ -80,4 +80,47 @@
   overflow: hidden;
 }
 
+/* Shiny Text-------------------------------------------- */
+.shiny-text-dark {
+  color: #b5b5b58f;
+  background: linear-gradient(
+    120deg,
+    #b5b5b58f 40%,
+    white 50%,
+    #b5b5b58f 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+
+.shiny-text-light {
+  color: #0000006d;
+  background: linear-gradient(
+    120deg,
+    #0000006d 40%,
+    #039855 90%,
+    #0000006d 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
 

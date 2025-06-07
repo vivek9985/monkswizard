@@ -11,6 +11,7 @@
   "dependencies": {
     "@remixicon/react": "^4.6.0",
     "@szhsin/react-accordion": "^1.4.1",
+    "framer-motion": "^12.16.0",
     "google-map-react": "^2.2.5",
     "next": "15.2.3",
     "react": "^19.0.0",

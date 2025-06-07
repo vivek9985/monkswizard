@@ -10,6 +10,7 @@ import HalfCircle from "@/assets/images/half-circle.png";
 import Spring from "@/assets/images/spring.svg";
 import Lines from "@/assets/images/lines.svg";
 import Link from "next/link";
+import CountUp from "@/animation/CountUp";
 
 export default function About() {
     return (
@@ -23,7 +24,7 @@ export default function About() {
                         <Image className="w-12 md:w-[65px] absolute left-[20%] bottom-0" src={Spring} alt="" width={65} height={56} />
                     </div>
                     <div className="w-10/12 md:w-9/12 xl:max-w-[508px]">
-                        <Badge variant="light" className="mx-auto xl:ml-0">About Us</Badge>
+                        <Badge variant="light" className="mx-auto xl:ml-0 mt-5">About Us</Badge>
                         <Heading variant="h2" className="text-primary-900 text-center xl:text-left my-4">
                             Digital Triumph Team
                         </Heading>
@@ -33,7 +34,15 @@ export default function About() {
                         <div className="flex items-center justify-center xl:justify-start gap-8 mt-8">
                             <div>
                                 <Heading variant="h4m" className="text-neutral-900">
-                                    47+
+                                    <CountUp
+                                        from={0}
+                                        to={47}
+                                        separator=","
+                                        direction="up"
+                                        duration={2}
+                                        className="count-up-text"
+                                    />
+                                    +
                                 </Heading>
                                 <Paragraph variant="para-11" className="text-neutral-600">
                                     Design
@@ -42,7 +51,15 @@ export default function About() {
                             <Image className="w-[15px] h-[62px]" src={Lines} alt="" width={15} height={62} />
                             <div>
                                 <Heading variant="h4m" className="text-neutral-900">
-                                    27+
+                                    <CountUp
+                                        from={0}
+                                        to={27}
+                                        separator=","
+                                        direction="up"
+                                        duration={2}
+                                        className="count-up-text"
+                                    />
+                                    +
                                 </Heading>
                                 <Paragraph variant="para-11" className="text-neutral-600">
                                     Review
@@ -51,7 +68,15 @@ export default function About() {
                             <Image className="w-[15px] h-[62px]" src={Lines} alt="" width={15} height={62} />
                             <div>
                                 <Heading variant="h4m" className="text-neutral-900">
-                                    90K
+                                    <CountUp
+                                        from={0}
+                                        to={90}
+                                        separator=","
+                                        direction="up"
+                                        duration={2}
+                                        className="count-up-text"
+                                    />
+                                    K
                                 </Heading>
                                 <Paragraph variant="para-11" className="text-neutral-600">
                                     Clients

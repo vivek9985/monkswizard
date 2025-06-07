@@ -2,7 +2,7 @@
 import Container from "@/Components/Utils/Container/Container";
 import Heading from "@/Components/Utils/Heading/Heading";
 import Paragraph from "@/Components/Utils/Paragraph/Paragraph";
-import HeroBgImage from "@/assets/images/home-one-hero-bg.png";
+import HeroBgImage from "@/assets/images/home-one-hero-bg.svg";
 import Badge from "@/Components/Utils/Badge/Badge";
 import PrimaryButton from "@/Components/Utils/Button/PrimaryButton";
 import HappyCustomerWidget from "@/Components/Widget/HappyCustomerWidget";
@@ -17,6 +17,8 @@ import LogoipsumFour from "@/assets/images/logoipsum-4.svg";
 import LogoipsumFive from "@/assets/images/logoipsum-5.svg";
 import { useState } from "react";
 import { RiCloseLargeLine } from "@remixicon/react";
+import ShinyText from "@/animation/ShinyText";
+import { motion } from "framer-motion";
 
 export default function Hero() {
     const [openVideo, setOpenVideo] = useState(false);
@@ -25,7 +27,11 @@ export default function Hero() {
             <Container>
                 <div className="flex flex-col gap-y-10 md:gap-y-[60px] xl:flex-row items-center justify-between">
                     <div className="w-10/12 md:w-9/12 xl:max-w-[604px]">
-                        <Badge className="mx-auto xl:ml-0">Best Digital Agency & Development</Badge>
+                        <motion.div initial={{ y: 40, opacity: 0, rotate: 10 }} animate={{ y: 0, opacity: 1, rotate: 0 }} transition={{delay: 0.1, duration: 0.5}}>
+                            <Badge className="mx-auto xl:ml-0">
+                                <ShinyText text="Best Digital Agency & Development" speed={2} />
+                            </Badge>
+                        </motion.div>
                         <Heading variant="h1" className="text-white text-center xl:text-left mt-4 mb-5">
                             Transforming Ideas into⚡️Digital Success Stories with us ✨
                         </Heading>
@@ -38,9 +44,9 @@ export default function Hero() {
                     <div className="max-w-[280px] sm:max-w-[320px] md:max-w-[400px] xl:max-w-[445px] flex items-center justify-center relative">
                         <Image src={HeroImage} alt="" width={445} height={533} />
                         <Image className="w-[50px] sm:w-[60px] md:w-[80px] xl:w-[92px] absolute -right-[9%] bottom-[11%] [animation:upDown_2s_ease-in-out_infinite]" src={HalfCircle} alt="" width={92} height={92} />
-                        <div onClick={() => setOpenVideo(true)}>
-                            <CircleButton className="scale-[0.65] md:scale-[0.85] xl:scale-100 absolute -left-[23%] sm:-left-[20%] md:-left-[15%] xl:-left-[14%] top-[10%]" />
-                        </div>
+                        <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{delay: 0.5, duration: 0.5}} onClick={() => setOpenVideo(true)} className="scale-[0.65] md:scale-[0.85] xl:scale-100 absolute -left-[23%] sm:-left-[20%] md:-left-[15%] xl:-left-[14%] top-[10%]">
+                            <CircleButton />
+                        </motion.div>
                     </div>
                 </div>
             </Container>
@@ -55,27 +61,27 @@ export default function Hero() {
                     <Image className="object-contain h-8 lg:h-10" src={LogoipsumFive} alt="" width={182} height={40} />
                 </div>
             </div>
-                {
-                    openVideo && (
-                        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-                            <div className="w-11/12 md:w-8/12 xl:w-[1010px]">
-                                <video
+            {
+                openVideo && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+                        <div className="w-11/12 md:w-8/12 xl:w-[1010px]">
+                            <video
                                 className="w-full" controls autoPlay loop muted >
                                 <source
                                     src="https://framerusercontent.com/assets/jiTEi6tiCiabzCOkSxzCTWnwwE.mp4"
                                     type="video/mp4"
                                 />
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div className="absolute top-10 right-12 text-white cursor-pointer"
-                                    onClick={() => setOpenVideo(false)}
-                                    >
-                                    <RiCloseLargeLine size={24} />
-                                </div>
+                                Your browser does not support the video tag.
+                            </video>
+                            <div className="absolute top-10 right-12 text-white cursor-pointer"
+                                onClick={() => setOpenVideo(false)}
+                            >
+                                <RiCloseLargeLine size={24} />
                             </div>
                         </div>
-                    )
-                }
+                    </div>
+                )
+            }
         </section>
     );
 }

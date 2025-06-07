@@ -6,6 +6,7 @@ import HappyCustomerFour from "@/assets/images/happy-customer-four.png"
 import Heading from "../Utils/Heading/Heading";
 import Paragraph from "../Utils/Paragraph/Paragraph";
 import React from "react";
+import CountUp from "@/animation/CountUp";
 
 interface HappyCustomerWidgetProps {
     className?: string;
@@ -23,7 +24,15 @@ export default function HappyCustomerWidget({ className }: HappyCustomerWidgetPr
             </div>
             <div className="text-center md:text-left">
                 <Heading variant="h5m" className="text-white">
-                    750k+
+                    <CountUp
+                        from={0}
+                        to={750}
+                        separator=","
+                        direction="up"
+                        duration={2}
+                        className="count-up-text"
+                    />{" "}
+                    k+
                 </Heading>
                 <Paragraph variant="para-11" className="text-neutral-300">
                     Happy Customers

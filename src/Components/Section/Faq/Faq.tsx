@@ -11,6 +11,7 @@ const buttonOptions = [
     { label: "Refund Policy", value: "refundpolicy" },
 ];
 
+
 export default function Faq() {
     const [activeButton, setActiveButton] = useState("sales&billings");
 

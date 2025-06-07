@@ -13,6 +13,7 @@ import HeroTwo from "@/assets/images/about-hero-2.png";
 import HeroThree from "@/assets/images/about-hero-3.png";
 import { useState } from "react";
 import { RiCloseLargeLine } from "@remixicon/react";
+import ShinyText from "@/animation/ShinyText";
 
 export default function Hero() {
     const [openVideo, setOpenVideo] = useState(false);
@@ -22,7 +23,7 @@ export default function Hero() {
             <Container>
                 <div className="flex flex-col items-center gap-y-[60px]">
                     <div className="w-10/12 md:w-9/12 xl:max-w-[874px] relative">
-                        <Badge className="mx-auto">About us</Badge>
+                        <Badge className="mx-auto"><ShinyText text="About us" /></Badge>
                         <Heading variant="h1" className="text-white text-center mt-4 mb-5">
                             The Passionate People Powering Our Digital Agency
                         </Heading>
