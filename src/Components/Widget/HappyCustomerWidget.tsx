@@ -29,6 +29,7 @@ export default function HappyCustomerWidget({ className }: HappyCustomerWidgetPr
                         to={750}
                         separator=","
                         direction="up"
+                        delay={3.1}
                         duration={2}
                         className="count-up-text"
                     />{" "}

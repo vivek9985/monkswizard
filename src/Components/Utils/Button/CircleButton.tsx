@@ -9,7 +9,7 @@ interface CircleButtonProps {
 
 export default function CircleButton({ className }: CircleButtonProps) {
     return (
-        <div className={`w-[130px] h-[130px] rounded-full bg-[#04010715] backdrop-blur-[15px] flex items-center justify-center border-[1px] border-[#ffffff50] cursor-pointer select-none ${className}`}>
+        <div className={`w-[130px] h-[130px] rounded-full bg-[#04010715] backdrop-blur-[15px] flex items-center justify-center border-[1px] border-[#ffffff50] cursor-pointer select-none overflow-hidden ${className}`}>
             <div className="relative w-full h-full rounded-full flex items-center justify-center">
                 <div className="flex items-center justify-center w-[70px] h-[70px] rounded-full border-[1px] border-[#ffffff50]">
                     <Image src={PlayIcon} alt="" width={22} height={22} />
