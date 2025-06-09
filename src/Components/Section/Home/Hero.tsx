@@ -90,7 +90,7 @@ export default function Hero() {
                         className="max-w-[280px] sm:max-w-[320px] md:max-w-[400px] xl:max-w-[440px] flex items-center justify-center relative">
                         <Image src={HeroImage} alt="Hero" width={445} height={533} priority />
                         <Image
-                            className="w-[50px] sm:w-[60px] md:w-[80px] xl:w-[92px] absolute -right-[9%] bottom-[11%] duration-700 delay-[20s] animate-bounce"
+                            className="w-[50px] sm:w-[60px] md:w-[80px] xl:w-[92px] absolute -right-[9%] bottom-[11%] animate-bounce"
                             src={HalfCircle}
                             alt="Decorative Half Circle"
                             width={92}
