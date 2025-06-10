@@ -21,7 +21,7 @@ export default function Hero() {
     const [openVideo, setOpenVideo] = useState(false);
 
     return (
-        <section className="bg-primary-600 pt-[120px] md:pt-[155px] pb-[64px] bg-no-repeat bg-cover bg-top" style={{ backgroundImage: `url(${HeroBgImage.src})` }}>
+        <section className="bg-primary-600 pt-[120px] md:pt-[155px] pb-[64px] overflow-x-hidden bg-no-repeat bg-cover bg-top" style={{ backgroundImage: `url(${HeroBgImage.src})` }}>
             <Container>
                 <div className="flex flex-col items-center gap-y-[60px]">
                     <div className="w-10/12 md:w-9/12 xl:max-w-[874px] relative">
@@ -50,8 +50,8 @@ export default function Hero() {
                                 <AnimatedCharacters text="We are creative agency that specializes in web design, seo, and Social media management. Our experienced team works closely." type="heading" />
                             </Paragraph>
                         </motion.div>
-                        <Image className="w-10 md:w-[50px] rotate-[65deg] absolute right-0 md:-right-[20%] bottom-[-5%] animate-bounce" src={HalfCircle} alt="" width={50} height={50} />
-                        <Image className="w-10 md:w-[65px] absolute -left-[10%] bottom-[-7%] animate-bounce" src={Spring} alt="" width={65} height={56} />
+                        <Image className="w-10 md:w-[50px] rotate-[65deg] absolute right-0 lg:-right-[5%] xl:-right-[20%] bottom-[-5%] animate-bounce" src={HalfCircle} alt="" width={50} height={50} />
+                        <Image className="w-10 md:w-[65px] absolute left-0 lg:-left-[10%] bottom-[-7%] animate-bounce" src={Spring} alt="" width={65} height={56} />
                     </div>
                     <div className="w-full flex flex-col lg:flex-row gap-y-7 items-center justify-center gap-x-[34px]">
                         <motion.div initial={{ y: 40, opacity: 0 }}

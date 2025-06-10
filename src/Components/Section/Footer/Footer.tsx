@@ -14,7 +14,7 @@ export default function Footer() {
     const pathname = usePathname()
     return (
         <section className="bg-primary-700 pt-[60px]">
-            <Container className={`${pathname === "/404" && "hidden"}`}>
+            <Container className={`${(pathname === "/404") ? "hidden" : "block"}`}>
                 <div className="w-10/12 sm:w-7/12 md:w-7/12 lg:w-8/12 xl:max-w-[718px] mx-auto">
                     <Heading variant="h2" className="text-white text-center">
                         Get The Best Customer Service Possible
@@ -58,7 +58,7 @@ export default function Footer() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/home-two" className="text-neutral-400 hover:text-success-600 block w-fit">
+                                    <Link href="/home-2" className="text-neutral-400 hover:text-success-600 block w-fit">
                                         <Paragraph variant="para-11">
                                             Home 02
                                         </Paragraph>
@@ -93,14 +93,14 @@ export default function Footer() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/privacy-policy" className="text-neutral-400 hover:text-success-600 block w-fit">
+                                    <Link href="/privacy" className="text-neutral-400 hover:text-success-600 block w-fit">
                                         <Paragraph variant="para-11">
                                             Privacy Policy
                                         </Paragraph>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/terms-condtion" className="text-neutral-400 hover:text-success-600 block w-fit">
+                                    <Link href="/terms" className="text-neutral-400 hover:text-success-600 block w-fit">
                                         <Paragraph variant="para-11">
                                             Terms & Condition
                                         </Paragraph>
