@@ -166,7 +166,7 @@ const Header = () => {
                 className={`w-full h-[100vh] flex z-20 absolute top-0 text-black duration-700 ease-out ${active ? "left-0" : "left-[-100%]"
                     }`}
             >
-                <div className="w-[65%] md:w-[50%] bg-neutral-100 px-2 md:px-5 py-5">
+                <div className="w-[65%] md:w-[50%] bg-neutral-100 px-2 md:px-5 py-5 overflow-y-scroll">
                     <div className="flex items-center justify-center">
                         <Link href="/">
                             <Image src={LogoDark} alt="" width={150} height={20} />
@@ -179,7 +179,10 @@ const Header = () => {
                                     <span
                                         className="flex items-center justify-between group"
                                     >
-                                        <span onClick={() => router.push(`/${item?.link}`)} className="cursor-pointer">{item?.nav_item}</span>
+                                        <span onClick={() => {
+                                            router.push(`/${item?.link}`)
+                                            setActive(false)
+                                        }} className="cursor-pointer">{item?.nav_item}</span>
                                         {item?.sub_item && (
                                             <span className="translate-y-[1px]">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6" /></svg>
@@ -193,7 +196,10 @@ const Header = () => {
                                                     key={subIndex}
                                                     className={`my-2.5 relative pl-5`}
                                                 >
-                                                    <span onClick={() => router.push(`/${subItem?.link}`)}
+                                                    <span onClick={() => {
+                                                        router.push(`/${subItem?.link}`)
+                                                        setActive(false)
+                                                    }}
                                                         className="group relative hover:text-primary-800 cursor-pointer"
                                                     >
                                                         {subItem?.nav_item}
