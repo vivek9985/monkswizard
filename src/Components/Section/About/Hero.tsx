@@ -21,7 +21,7 @@ export default function Hero() {
     const [openVideo, setOpenVideo] = useState(false);
 
     return (
-        <section className="bg-primary-600 pt-[155px] pb-[64px] bg-no-repeat bg-cover bg-top" style={{ backgroundImage: `url(${HeroBgImage.src})` }}>
+        <section className="bg-primary-600 pt-[120px] md:pt-[155px] pb-[64px] bg-no-repeat bg-cover bg-top" style={{ backgroundImage: `url(${HeroBgImage.src})` }}>
             <Container>
                 <div className="flex flex-col items-center gap-y-[60px]">
                     <div className="w-10/12 md:w-9/12 xl:max-w-[874px] relative">
@@ -50,10 +50,10 @@ export default function Hero() {
                                 <AnimatedCharacters text="We are creative agency that specializes in web design, seo, and Social media management. Our experienced team works closely." type="heading" />
                             </Paragraph>
                         </motion.div>
-                        <Image className="w-[50px] rotate-[65deg] absolute -right-[20%] bottom-[-5%] animate-bounce" src={HalfCircle} alt="" width={50} height={50} />
+                        <Image className="w-10 md:w-[50px] rotate-[65deg] absolute right-0 md:-right-[20%] bottom-[-5%] animate-bounce" src={HalfCircle} alt="" width={50} height={50} />
                         <Image className="w-[65px] absolute -left-[10%] bottom-[-7%] animate-bounce" src={Spring} alt="" width={65} height={56} />
                     </div>
-                    <div className="w-full flex items-center justify-center gap-x-[34px]">
+                    <div className="w-full flex flex-col lg:flex-row gap-y-7 items-center justify-center gap-x-[34px]">
                         <motion.div initial={{ y: 40, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 1.5, duration: 0.5 }}>
@@ -64,7 +64,7 @@ export default function Hero() {
                             transition={{ delay: 1.8, duration: 0.5 }} className="max-w-[280px] sm:max-w-[320px] md:max-w-[400px] xl:max-w-[484px] flex items-center justify-center relative">
                             <Image src={HeroTwo} alt="" width={445} height={533} />
                             <div onClick={() => setOpenVideo(true)}>
-                                <CircleButton className="scale-90 absolute -right-[23%] sm:-right-[20%] md:-right-[15%] xl:-right-[6%] top-[-13%]" />
+                                <CircleButton className="scale-50 md:scale-90 absolute -right-[23%] sm:-right-[20%] md:-right-[15%] xl:-right-[6%] top-[-13%]" />
                             </div>
                         </motion.div>
                         <motion.div initial={{ y: 40, opacity: 0 }}
