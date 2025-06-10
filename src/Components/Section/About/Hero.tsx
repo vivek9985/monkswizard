@@ -51,7 +51,7 @@ export default function Hero() {
                             </Paragraph>
                         </motion.div>
                         <Image className="w-10 md:w-[50px] rotate-[65deg] absolute right-0 md:-right-[20%] bottom-[-5%] animate-bounce" src={HalfCircle} alt="" width={50} height={50} />
-                        <Image className="w-[65px] absolute -left-[10%] bottom-[-7%] animate-bounce" src={Spring} alt="" width={65} height={56} />
+                        <Image className="w-10 md:w-[65px] absolute -left-[10%] bottom-[-7%] animate-bounce" src={Spring} alt="" width={65} height={56} />
                     </div>
                     <div className="w-full flex flex-col lg:flex-row gap-y-7 items-center justify-center gap-x-[34px]">
                         <motion.div initial={{ y: 40, opacity: 0 }}
