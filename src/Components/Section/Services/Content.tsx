@@ -18,7 +18,7 @@ export default function Content() {
                         <Image className="w-12 md:w-[65px] absolute left-[-12%] top-5" src={Spring} alt="" width={65} height={56} />
                     </div>
                     <div className="w-10/12 md:w-9/12 lg:w-8/12 xl:max-w-[508px]">
-                        <Badge className="mx-auto xl:ml-0">Out Approach</Badge>
+                        <Badge className="mx-auto xl:ml-0">Our Approach</Badge>
                         <Heading variant="h2" className="text-white text-center xl:text-left my-4">
                             Pioneering Your Digital Success with Strengths
                         </Heading>
