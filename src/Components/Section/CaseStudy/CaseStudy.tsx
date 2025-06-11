@@ -6,7 +6,6 @@ import Data from "@/db/data.json";
 import Heading from "@/Components/Utils/Heading/Heading";
 import { RiSearch2Line } from "@remixicon/react";
 import Image from "next/image";
-import CaseStudyImage from "../../../../public/images/case-study-1.png";
 import Paragraph from "@/Components/Utils/Paragraph/Paragraph";
 
 const buttonOptions = [
@@ -14,14 +13,13 @@ const buttonOptions = [
     { label: "Branding", value: "branding" },
     { label: "Design", value: "design" },
     { label: "Development", value: "development" },
-    { label: "Marketing", value: "marketing" },
-    { label: "Photography", value: "photography" },
+    { label: "Art", value: "art" },
 ];
 
 
 export default function CaseStudy() {
     const [activeButton, setActiveButton] = useState("all");
-    const [activeBlog, setActiveBlog] = useState(Data?.blog);
+    const [activeCaseStudy, setActiveCaseStudy] = useState(Data?.caseStudiesData);
 
     return (
         <section className="py-20 lg:py-24 xl:py-[110px]">
@@ -40,7 +38,7 @@ export default function CaseStudy() {
                         <div
                             onClick={() => {
                                 setActiveButton(value);
-                                setActiveBlog(label === "All" ? Data?.blog : Data?.blog?.filter((blog) => blog?.category === label));
+                                setActiveCaseStudy(label === "All" ? Data?.caseStudiesData : Data?.caseStudiesData?.filter((caseStudy) => caseStudy?.category === label));
                             }}
                             key={value}
                         >
@@ -55,14 +53,14 @@ export default function CaseStudy() {
                 </div>
                 <div className="grid md:grid-cols-2 gap-5 md:gap-6 xl:gap-8">
                     {
-                        activeBlog?.map((item, i) => (
+                        activeCaseStudy?.map((item, i) => (
                             <div key={i}>
                                 <div className="w-[554px] h-[398px] rounded-3xl overflow-hidden">
-                                    <Image className="w-full h-full object-cover" src={CaseStudyImage} width={554} height={398} alt="" />
+                                    <Image className="w-full h-full object-cover" src={item?.image} width={554} height={398} alt="" />
                                 </div>
                                 <div className="mt-5">
-                                    <Paragraph variant="para-11" className="text-success-500">Brand Identity</Paragraph>
-                                    <Heading variant="h5" className="text-neutral-900 mt-1">Brand Identity</Heading>
+                                    <Paragraph variant="para-11" className="text-success-500">{item?.category}</Paragraph>
+                                    <Heading variant="h5" className="text-neutral-900 mt-1">{item?.title}</Heading>
                                 </div>
                             </div>
                         ))

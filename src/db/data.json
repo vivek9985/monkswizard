@@ -130,28 +130,28 @@
     ],
     "caseStudiesData": [
         {
-            "image": "/images/service-one.webp",
+            "image": "/images/casestudy-1.webp",
             "title": "SEO Optimization",
             "category": "Brand Identity Website",
             "description": "From SEO to social media marketing, we create data-driven strategies that enhance your visibility, engage your audience, and increase conversions.",
             "link": "/"
         },
         {
-            "image": "/images/service-two.webp",
+            "image": "/images/casestudy-2.webp",
             "title": "E-commerce",
             "category": "Website Development",
             "description": "We create high-performing, user-friendly e-commerce websites that boost sales, enhance customer experiences, and drive growth.",
             "link": "/"
         },
         {
-            "image": "/images/service-three.webp",
+            "image": "/images/casestudy-3.webp",
             "title": "Brand Identity",
             "category": "Brand Identity",
             "description": "Your brand is more than just a logo—it's the face of your business. Our branding experts help you build a strong identity.",
             "link": "/"
         },
         {
-            "image": "/images/service-four.webp",
+            "image": "/images/casestudy-4.webp",
             "title": "Online Management",
             "category": "Design Direction",
             "description": "We manage online marketing strategies that increase brand visibility, drive traffic, and boost customer engagement effectively.",
