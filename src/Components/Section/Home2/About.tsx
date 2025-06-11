@@ -7,6 +7,7 @@ import Image from "next/image";
 import AboutOne from "@/assets/images/home-two-about-one.png";
 import AboutTwo from "@/assets/images/home-two-about-two.png";
 import Link from "next/link";
+import CountUp from "@/animation/CountUp";
 
 export default function About() {
     return (
@@ -47,7 +48,14 @@ export default function About() {
                     <div className="xl:max-w-[176px] flex flex-wrap items-center justify-center xl:flex-nowrap xl:justify-start xl:items-start xl:flex-col gap-4 xl:gap-6">
                         <div className="xl:w-full rounded-xl bg-warning-100 px-5 py-2">
                             <Heading variant="h3" className="text-primary-900">
-                                47+
+                                <CountUp
+                                    from={0}
+                                    to={47}
+                                    separator=","
+                                    direction="up"
+                                    duration={2}
+                                />
+                                +
                             </Heading>
                             <Paragraph variant="para-11" className="text-neutral-700 mt-1">
                                 Projects complete
@@ -55,7 +63,14 @@ export default function About() {
                         </div>
                         <div className="xl:w-full rounded-xl bg-success-100 px-5 py-2">
                             <Heading variant="h3" className="text-primary-900">
-                                27k
+                                <CountUp
+                                    from={0}
+                                    to={27}
+                                    separator=","
+                                    direction="up"
+                                    duration={2}
+                                />
+                                k
                             </Heading>
                             <Paragraph variant="para-11" className="text-neutral-700 mt-1">
                                 Positive reviews
@@ -63,7 +78,13 @@ export default function About() {
                         </div>
                         <div className="xl:w-full rounded-xl bg-error-100 px-5 py-2">
                             <Heading variant="h3" className="text-primary-900">
-                                90%
+                                <CountUp
+                                    from={0}
+                                    to={90}
+                                    separator=","
+                                    direction="up"
+                                    duration={2}
+                                />%
                             </Heading>
                             <Paragraph variant="para-11" className="text-neutral-700 mt-1">
                                 Clients satisfaction

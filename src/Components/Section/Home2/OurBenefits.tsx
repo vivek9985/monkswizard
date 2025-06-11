@@ -6,6 +6,9 @@ import PrimaryButton from "@/Components/Utils/Button/PrimaryButton";
 import Link from "next/link";
 import OurBenefitCard from "@/Components/Card/OurBenefitCard";
 import IconOne from "../../../../public/images/icons/light.svg";
+import IconTwo from "../../../../public/images/icons/three-triangle.svg";
+import IconThree from "../../../../public/images/icons/car.svg";
+import IconFour from "../../../../public/images/icons/document.svg";
 
 export default function OurBenefits() {
     return (
@@ -20,7 +23,7 @@ export default function OurBenefits() {
                         <Paragraph variant="para-11" className="text-center xl:text-left text-neutral-700">
                             Explore the foundational pillars of our services, meticulously designed to empower and redefine your digital narrative. Our expertise spans Creativity.
                         </Paragraph>
-                        <Link href="/" className="block w-fit mx-auto translate-x-[-17px] xl:translate-x-0 xl:ml-0 mt-10">
+                        <Link href="/about" className="block w-fit mx-auto translate-x-[-17px] xl:translate-x-0 xl:ml-0 mt-10">
                             <PrimaryButton><span className="text-neutral-700">View Details</span></PrimaryButton>
                         </Link>
                     </div>
@@ -31,19 +34,19 @@ export default function OurBenefits() {
                             description="Bold & Artistic"
                         />
                         <OurBenefitCard
-                            icon={IconOne}
-                            title="Creativity"
-                            description="Bold & Artistic"
+                            icon={IconTwo}
+                            title="Strategy"
+                            description="Smart & Targeted"
                         />
                         <OurBenefitCard
-                            icon={IconOne}
-                            title="Creativity"
-                            description="Bold & Artistic"
+                            icon={IconThree}
+                            title="Timely Delivery"
+                            description="Distinct & Memorable"
                         />
                         <OurBenefitCard
-                            icon={IconOne}
-                            title="Creativity"
-                            description="Bold & Artistic"
+                            icon={IconFour}
+                            title="Expertise"
+                            description="Cutting-Edge"
                         />
                     </div>
                 </div>
