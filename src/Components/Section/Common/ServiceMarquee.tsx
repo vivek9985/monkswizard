@@ -10,13 +10,26 @@ const services = [
   "UI/UX Design",
   "Content Creation",
   "UI Commerce Solution",
+  "Web Development",
+  "Digital Marketing",
+  "Branding & Identity",
+  "UI/UX Design",
+  "Content Creation",
+  "UI Commerce Solution",
+  "Web Development",
+  "Digital Marketing",
+  "Branding & Identity",
+  "UI/UX Design",
+  "Content Creation",
+  "UI Commerce Solution",
+  "Web Development",
 ];
 
 export default function ServiceMarquee() {
   return (
     <section className="bg-primary-700 py-6 md:py-8 overflow-x-hidden">
       <Marquee speed={60}>
-        {services?.concat(services?.slice(2, 4)).map((item, i) => (
+        {services?.map((item, i) => (
           <div key={i} className="flex items-center">
             <Heading variant="h6" className="text-white">
               {item}
