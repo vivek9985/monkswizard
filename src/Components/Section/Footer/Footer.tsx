@@ -185,7 +185,7 @@ export default function Footer() {
                 <div className="bg-primary-500 w-full h-px mt-10 xl:mt-[69px]"></div>
                 <div className="flex flex-col md:flex-row-reverse gap-y-3 items-center justify-between pt-6 pb-7">
                     <div className="flex items-center gap-2">
-                        <Link href="/terms-condition">
+                        <Link href="/terms">
                             <Paragraph variant="para-11" className="text-neutral-400">
                                 Terms & Condition
                             </Paragraph>
@@ -193,7 +193,7 @@ export default function Footer() {
                         <Paragraph variant="para-11" className="text-neutral-400">
                             .
                         </Paragraph>
-                        <Link href="/privacy-policy">
+                        <Link href="/privacy">
                             <Paragraph variant="para-11" className="text-neutral-400">
                                 Privacy Policy
                             </Paragraph>
