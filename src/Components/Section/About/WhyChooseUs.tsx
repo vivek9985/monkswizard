@@ -8,16 +8,16 @@ import ThunderIcon from "@/assets/images/icons/thunder-green.svg"
 
 const whyChooseData = [
     {
-        "title": "Discussion",
-        "description": "The rise of digital technology has revolutionized the way businesses operate, communicate, and connect with their audiences.",
+        "title": "Discovery & Strategy",
+        "description": "We begin by diving deep into your business goals, audience, and market.",
     },
     {
-        "title": "Design",
-        "description": "A well-designed website not only looks visually bt also enhances usability, overall user experience.",
+        "title": "Creative Ideation & Design",
+        "description": "Our creative team transforms your vision into reality through innovative design concepts.",
     },
     {
-        "title": "Production",
-        "description": "The world of digital production, meticulous planning, expertise are paramount to delivering high-quality.",
+        "title": "Development & Implementation",
+        "description": "Once the design is approved, our skilled developers take over to build a robust, scalable product.",
     }
 ]
 
@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
                     <div className="w-[80%] sm:w-[400px] md:w-[450px] xl:w-[510px] h-[380px] sm:h-[400px] md:h-[460px] xl:h-[522px] rounded-tl-[60px] rounded-tr-[20px] rounded-br-[20px] overflow-hidden flex items-center justify-center bg-[linear-gradient(118deg,#EEC800_-9%,#B1F8B1_61.4475%,#B1F8B1_100%)] pl-2 pb-2">
                         <Image className="w-full h-full object-cover" src={ContentImage} alt="" width={410} height={418} />
                     </div>
-                    <div className="w-full md:w-9/12 xl:max-w-[508px]">
+                    <div className="w-full md:w-9/12 xl:max-w-[500px]">
                         <Badge variant="light" className="mx-auto xl:ml-0">Why Choose Us</Badge>
                         <Heading variant="h2" className="text-primary-900 text-center xl:text-left mt-2">
                             How We Work?
