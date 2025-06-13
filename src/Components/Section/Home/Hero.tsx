@@ -21,6 +21,7 @@ import { RiCloseLargeLine } from "@remixicon/react";
 import ShinyText from "@/animation/ShinyText";
 import AnimatedCharacters from "@/animation/AnimatedCharacters";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
     const [openVideo, setOpenVideo] = useState<boolean>(false);
@@ -71,10 +72,12 @@ export default function Hero() {
 
                         <motion.div initial={{ y: 30, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 2.5, duration: 0.5 }}>
-                            <PrimaryButton className="mx-auto translate-x-[-17px] xl:translate-x-0 xl:ml-0 mt-7 xl:mt-8">
-                                Get Started
-                            </PrimaryButton>
+                            transition={{ delay: 2.5, duration: 0.5 }}
+                            className="w-fit mx-auto translate-x-[-17px] xl:translate-x-0 xl:ml-0 mt-7 xl:mt-8"
+                            >
+                            <Link href="/contact">
+                                <PrimaryButton>Get Started</PrimaryButton>
+                            </Link>
                         </motion.div>
                         <motion.div initial={{ y: 40, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
@@ -113,13 +116,13 @@ export default function Hero() {
             <div className="w-10/12 md:w-9/12 lg:w-8/12 xl:w-11/12 max-w-[1240px] mx-auto">
                 <div className="bg-[#ffffff33] w-full h-px mt-[90px]" />
                 <motion.div
-                        initial="hidden"
-                        animate="visible"
-                        variants={{ visible: { transition: { delayChildren: 1.3, staggerChildren: 0.005 } } }}>
+                    initial="hidden"
+                    animate="visible"
+                    variants={{ visible: { transition: { delayChildren: 1.3, staggerChildren: 0.005 } } }}>
                     <Heading variant="h6" className="text-neutral-200 text-center mt-12">
-                            <AnimatedCharacters
+                        <AnimatedCharacters
                             text="More than 2000+ companies trusted us and collaborate with us"
-                    />
+                        />
                     </Heading>
                 </motion.div>
                 <div className="flex items-center justify-center xl:justify-between flex-wrap gap-x-5 lg:gap-x-12 gap-y-4 md:gap-y-5 mt-10">
