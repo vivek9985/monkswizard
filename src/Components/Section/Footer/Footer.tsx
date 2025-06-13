@@ -12,6 +12,7 @@ import { usePathname } from "next/navigation";
 
 export default function Footer() {
     const pathname = usePathname()
+    const year = new Date(Date.now()).getFullYear()
     return (
         <section className="bg-primary-700 pt-[60px]">
             <Container className={`${(pathname === "/404") ? "hidden" : "block"}`}>
@@ -200,7 +201,7 @@ export default function Footer() {
                         </Link>
                     </div>
                     <Paragraph variant="para-11" className="text-neutral-400">
-                        © 2024 MonksWizard. All rights reserved.
+                        © {year} MonksWizard. All rights reserved.
                     </Paragraph>
                 </div>
             </Container>
