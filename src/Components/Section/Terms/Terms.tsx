@@ -3,8 +3,7 @@ import Paragraph from "@/Components/Utils/Paragraph/Paragraph";
 
 export default function Terms() {
     return (
-        <section className="py-[110px]">
-            <div className="max-w-[800px] mx-auto">
+            <section className="max-w-[800px] mx-auto py-20 lg:py-[110px] px-5 lg:px-0">
                 <Heading variant="h2">Terms & Conditions</Heading>
                 <div className="flex flex-col gap-10 mt-12">
                     <div>
@@ -62,7 +61,6 @@ export default function Terms() {
                         </Paragraph>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
     )
 }
