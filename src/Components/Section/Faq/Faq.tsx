@@ -20,8 +20,8 @@ export default function Faq() {
     );
 
     return (
-        <div className="max-w-[815px] mx-auto my-[110px]">
-            <div className="flex items-center justify-center gap-1">
+        <div className="max-w-[815px] mx-auto my-20 md:my-[110px] px-5 lg:px-0">
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-1">
                 {buttonOptions.map(({ label, value }) => (
                     <div
                         onClick={() => setActiveButton(value)}
