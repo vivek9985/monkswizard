@@ -56,9 +56,11 @@ export default function Project() {
                                     Online <br /> Managment
                                 </Heading>
                             </div>
-                            <div className="w-[54px] h-[54px] rounded-full bg-white duration-300 cursor-pointer hover:bg-secondary-500 flex items-center justify-center absolute top-5 right-6">
-                                <RiArrowRightUpLongLine className="rotate-[10deg]" size={28} />
-                            </div>
+                            <Link href="/case-study">
+                                <div className="w-[54px] h-[54px] rounded-full bg-white duration-300 cursor-pointer hover:bg-secondary-500 flex items-center justify-center absolute top-5 right-6">
+                                    <RiArrowRightUpLongLine className="rotate-[10deg]" size={28} />
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
