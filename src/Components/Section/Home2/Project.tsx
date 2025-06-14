@@ -34,7 +34,9 @@ export default function Project() {
                         <div className="w-fit md:max-w-[603px] p-5 lg:py-[26px] lg:px-[29px] border-[1px] border-[#E7E7E775] absolute left-3 bottom-3 right-3 mx-auto md:ml-0 md:left-8 md:bottom-7 bg-[#AFEEBA16] backdrop-blur-2xl rounded-[20px]">
                             <Heading variant="h3" className="text-white">Introducing Our Digital Success Stories</Heading>
                             <Paragraph variant="para-11" className="mt-1 mb-7 text-white">Development to digital marketing and beyond, we&apos;re dedicated to elevating your brand&apos;s online presence and driving.</Paragraph>
-                            <PrimaryButton>Explore More</PrimaryButton>
+                            <Link href="case-study" className="w-fit block">
+                                <PrimaryButton>Explore More</PrimaryButton>
+                            </Link>
                         </div>
                     </div>
                     <div className="grid sm:grid-cols-2 gap-5 xl:gap-6 mt-5 xl:mt-6">
