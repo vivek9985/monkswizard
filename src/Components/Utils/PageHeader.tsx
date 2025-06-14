@@ -50,7 +50,7 @@ export default function PageHeader({ subtitle, title, paragraph, className = "" 
                                 <AnimatedCharacters text={paragraph} />
                             </Paragraph>
                         </motion.span>
-                        <Image className="w-[50px] absolute right-0 bottom-[10%] animate-bounce" src={HalfCircle} alt="" width={50} height={50} />
+                        <Image className="w-[50px] hidden lg:flex absolute right-0 bottom-[10%] animate-bounce" src={HalfCircle} alt="" width={50} height={50} />
                     </div>
                 </div>
             </Container>
