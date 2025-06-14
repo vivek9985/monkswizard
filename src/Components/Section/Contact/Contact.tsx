@@ -65,7 +65,7 @@ export default function Contact() {
                                 <label>Services</label>
                             </Paragraph>
                             <div onClick={selectHandler} className="w-full relative bg-neutral-50 border-[1px] border-neutral-300 py-2.5 px-3 rounded-lg text-[#A7A5A6] text-[16px] leading-[170%] font-[family-name:var(--font-outfit)] font-normal cursor-pointer focus:outline-none mb-4">
-                                <Paragraph variant="para-11" className="text-[#A7A5A6]">
+                                <Paragraph variant="para-11" className={`${selectItem ? "text-neutral-800": "text-[#A7A5A6]"}`}>
                                     {
                                         selectItem ? selectItem : "Service here"
                                     }
