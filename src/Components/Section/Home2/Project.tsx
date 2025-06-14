@@ -45,9 +45,11 @@ export default function Project() {
                                     Technical <br /> Solution
                                 </Heading>
                             </div>
-                            <div className="w-[54px] h-[54px] rounded-full bg-white duration-300 cursor-pointer hover:bg-secondary-500 flex items-center justify-center absolute top-5 right-6">
-                                <RiArrowRightUpLongLine className="rotate-[10deg]" size={28} />
-                            </div>
+                            <Link href="/case-study">
+                                <div className="w-[54px] h-[54px] rounded-full bg-white duration-300 cursor-pointer hover:bg-secondary-500 flex items-center justify-center absolute top-5 right-6">
+                                    <RiArrowRightUpLongLine className="rotate-[10deg]" size={28} />
+                                </div>
+                            </Link>
                         </div>
                         <div className="w-full h-[294px] rounded-[20px] rounded-br-none relative group overflow-hidden">
                             <Image className="w-full h-full object-cover object-center group-hover:scale-110 duration-500" src={ProjectThree} alt="" width={558} height={294} />
