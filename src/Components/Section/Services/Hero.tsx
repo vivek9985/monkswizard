@@ -49,8 +49,8 @@ export default function Hero() {
                                 <AnimatedCharacters text="We are creative agency that specializes in web design, seo, and Social media management. Our experienced team works closely." />
                             </Paragraph>
                         </motion.div>
-                        <Image className="w-[50px] absolute right-0 bottom-[10%] animate-bounce" src={HalfCircle} alt="" width={50} height={50} />
-                        <Image className="w-[65px] absolute left-[-5%] bottom-[-20%] animate-bounce" src={Spring} alt="" width={65} height={56} />
+                        <Image className="w-[50px] hidden lg:block absolute right-0 bottom-[10%] animate-bounce" src={HalfCircle} alt="" width={50} height={50} />
+                        <Image className="w-[65px] hidden lg:block absolute left-2 xl:left-[-5%] bottom-[-20%] animate-bounce" src={Spring} alt="" width={65} height={56} />
                     </div>
                 </div>
             </Container>
