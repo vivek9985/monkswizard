@@ -10,7 +10,7 @@ import NotFoundImage from "../assets/images/404.svg";
 
 export default function NotFound() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen text-center px-4">
+        <div className="flex flex-col items-center justify-center py-[150px] md:py-[200px] lg:min-h-screen text-center px-4">
             <Image className="w-[220px] h-[160px] object-contain" src={NotFoundImage} alt="404" width={220} height={160} />
             <Heading variant="h1" className="text-black mt-11">404</Heading>
             <Heading variant="h3" className="mt-3 mb-4">There&apos;s Something Wrong</Heading>
