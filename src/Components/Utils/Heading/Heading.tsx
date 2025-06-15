@@ -11,11 +11,11 @@ export default function Heading({ children, className, variant = "h2" }: Heading
         <>
             {
                 variant === "large" ? (
-                    <h2 className={`text-[32px] md:text-[40px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] leading-[110%] font-[family-name:var(--font-clashdisplay)] font-semibold ${className}`}>
+                    <h2 className={`text-[38px] md:text-[40px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] leading-[110%] font-[family-name:var(--font-clashdisplay)] font-semibold ${className}`}>
                         {children}
                     </h2>
                 ) : variant === "h1" ? (
-                    <h2 className={`text-[32px] md:text-[40px] xl:text-[56px] leading-[120%] font-[family-name:var(--font-clashdisplay)] font-semibold ${className}`}>
+                    <h2 className={`text-[40px] xl:text-[56px] leading-[120%] font-[family-name:var(--font-clashdisplay)] font-semibold ${className}`}>
                         {children}
                     </h2>
                 ) : variant === "h2" ? (
