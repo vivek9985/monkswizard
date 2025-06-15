@@ -20,7 +20,7 @@ export default function CaseStudy() {
             <div className="w-10/12 md:w-full lg:w-full mx-auto flex flex-col mt-10 md:mt-[60px] border-t-[1px] border-primary-500">
                 {
                     Data?.caseStudiesData?.map((item, i) => (
-                        <CaseStudyWidget key={i} image={item?.image} title={item?.title} description={item?.description} category={item?.category} link={item?.link} />
+                        <CaseStudyWidget key={i} image={item?.image} title={item?.title} description={item?.description} category={item?.category} link="/case-study" />
                     ))
                 }
             </div>
