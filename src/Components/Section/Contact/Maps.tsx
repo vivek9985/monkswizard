@@ -17,12 +17,12 @@ export default function Maps() {
     };
 
     return (
-        <div>
+        <section>
             <div className="max-w-[482px] pt-20 pb-16 mx-auto">
                 <Heading variant="h2" className="text-center">Contact Information</Heading>
                 <Paragraph variant="para-11" className="text-center text-neutral-500 mt-3"> If the map is accompanied by contact details such as the agency&apos;s address, phone number, and email address.</Paragraph>
             </div>
-            <div style={{ height: "600px", width: "100%" }}>
+            <div className="w-full h-[600px]">
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: "AIzaSyDFdadqDbt-vScG6IhGrvgN03lonUPw4VA" }}
                     defaultCenter={defaultProps.center}
@@ -31,6 +31,6 @@ export default function Maps() {
                     <MapMarker text="My Marker" />
                 </GoogleMapReact>
             </div>
-        </div>
+        </section>
     );
 }
