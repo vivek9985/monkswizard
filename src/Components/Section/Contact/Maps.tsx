@@ -13,7 +13,7 @@ export default function Maps() {
             lat: 23.822336,
             lng: 90.423296,
         },
-        zoom: 11,
+        zoom: 12,
     };
 
     return (
