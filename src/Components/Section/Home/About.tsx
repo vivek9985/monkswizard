@@ -17,7 +17,7 @@ export default function About() {
         <section className="bg-white py-20 md:py-[100px] xl:py-[120px]">
             <Container>
                 <div className="flex flex-col gap-y-10 md:gap-y-[60px] xl:flex-row items-center justify-between">
-                    <div className="w-[80%] sm:w-[400px] md:w-[450px] xl:w-[537px] h-[380px] sm:h-[400px] md:h-[460px] xl:h-[515px] flex items-center justify-center relative">
+                    <div className="w-full max-w-[400px] md:max-w-[500px] xl:max-w-[537px] h-[380px] sm:h-[400px] md:h-[460px] xl:h-[515px] flex items-center justify-center relative">
                         <Image className="w-9/12 md:w-[380px] xl:w-[420px] absolute top-0 left-0" src={AboutOne} alt="" width={410} height={418} />
                         <Image className="w-6/12 md:w-[250px] xl:w-[303px] absolute bottom-0 right-0" src={AboutTwo} alt="" width={303} height={235} />
                         <Image className="w-[50px] sm:w-[60px] md:w-[80px] absolute right-[16%] md:right-[8%] xl:right-[16%] top-[20%]" src={HalfCircle} alt="" width={80} height={80} />

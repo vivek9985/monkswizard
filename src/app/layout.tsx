@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${clashdisplay.variable} antialiased`}>
+      <body className={`overflow-x-hidden ${outfit.variable} ${clashdisplay.variable} antialiased`}>
         <Header />
         {children}
         <Footer />

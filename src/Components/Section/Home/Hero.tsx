@@ -28,13 +28,13 @@ export default function Hero() {
 
     return (
         <section
-            className="bg-primary-600 pt-[160px] pb-[64px] bg-no-repeat bg-cover bg-top"
+            className="bg-primary-600 pt-[130px] lg:pt-[160px] pb-[64px] bg-no-repeat bg-cover bg-top"
             style={{ backgroundImage: `url(${HeroBgImage.src})` }}
         >
             <Container>
                 <div className="flex flex-col gap-y-10 md:gap-y-[60px] xl:flex-row items-center justify-between">
                     {/* Left Content */}
-                    <div className="w-10/12 md:w-9/12 xl:max-w-[610px]">
+                    <div className="w-full sm:w-10/12 md:w-9/12 lg:w-7/12 xl:max-w-[610px]">
                         <motion.div
                             initial={{ y: 40, opacity: 0, rotate: 10 }}
                             animate={{ y: 0, opacity: 1, rotate: 0 }}
@@ -126,11 +126,11 @@ export default function Hero() {
                     </Heading>
                 </motion.div>
                 <div className="flex items-center justify-center xl:justify-between flex-wrap gap-x-5 lg:gap-x-12 gap-y-4 md:gap-y-5 mt-10">
-                    <Image className="object-contain h-8 lg:h-10" src={LogoipsumOne} alt="Logo 1" width={224} height={40} />
-                    <Image className="object-contain h-8 lg:h-10" src={LogoipsumTwo} alt="Logo 2" width={187} height={40} />
-                    <Image className="object-contain h-8 lg:h-10" src={LogoipsumThree} alt="Logo 3" width={158} height={40} />
-                    <Image className="object-contain h-8 lg:h-10" src={LogoipsumFour} alt="Logo 4" width={155} height={40} />
-                    <Image className="object-contain h-8 lg:h-10" src={LogoipsumFive} alt="Logo 5" width={182} height={40} />
+                    <Image className="object-contain h-7 md:h-8 lg:h-10" src={LogoipsumOne} alt="Logo 1" width={224} height={40} />
+                    <Image className="object-contain h-7 md:h-8 lg:h-10" src={LogoipsumTwo} alt="Logo 2" width={187} height={40} />
+                    <Image className="object-contain h-7 md:h-8 lg:h-10" src={LogoipsumThree} alt="Logo 3" width={158} height={40} />
+                    <Image className="object-contain h-7 md:h-8 lg:h-10" src={LogoipsumFour} alt="Logo 4" width={155} height={40} />
+                    <Image className="object-contain h-7 md:h-8 lg:h-10" src={LogoipsumFive} alt="Logo 5" width={182} height={40} />
                 </div>
             </div>
 
