@@ -20,7 +20,7 @@ export default function OurBenefits() {
                         We are creative agency that specializes in web design, seo, and Social media management. Our experienced team works closely with clients to deliver customized solutions.
                     </Paragraph>
                 </div>
-                <div className="w-8/12 sm:w-7/12 md:w-10/12 lg:w-8/12 xl:w-full mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-5 xl:gap-6 mt-10 md:mt-[60px] relative">
+                <div className="max-w-[400px] sm:max-w-full sm:w-7/12 md:w-10/12 lg:w-8/12 xl:w-full mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-5 xl:gap-6 mt-10 md:mt-[60px] relative">
                     {
                         Data?.ourBenifitsData?.map((item, i) => (
                             <OurBenefitCard
