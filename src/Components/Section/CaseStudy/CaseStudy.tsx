@@ -55,7 +55,7 @@ export default function CaseStudy() {
                     {
                         activeCaseStudy?.map((item, i) => (
                             <div key={i}>
-                                <div className="w-[554px] h-[398px] rounded-4xl relative group overflow-hidden">
+                                <div className="h-[398px] rounded-4xl relative group overflow-hidden">
                                     <img className="w-full h-full object-cover" src={item?.image} alt="" />
                                     <div className="w-full h-0 flex items-center justify-center absolute left-0 bottom-0 bg-[linear-gradient(to_top,black_5%,transparent_80%)] group-hover:h-full duration-500">
                                         <div className="w-24 h-24 flex items-center justify-center border-[2px] border-white rounded-full backdrop-blur-sm cursor-pointer select-none translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 duration-500">
