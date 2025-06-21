@@ -17,7 +17,7 @@ export default function Maps() {
     };
 
     return (
-        <section>
+        <div>
             <div className="max-w-[482px] pt-10 md:pt-14 lg:pt-20 pb-10 lg:pb-16 mx-auto">
                 <Heading variant="h2" className="text-center">Contact Information</Heading>
                 <Paragraph variant="para-11" className="text-center text-neutral-500 mt-3"> If the map is accompanied by contact details such as the agency&apos;s address, phone number, and email address.</Paragraph>
@@ -31,6 +31,6 @@ export default function Maps() {
                     <MapMarker text="My Marker" />
                 </GoogleMapReact>
             </div>
-        </section>
+        </div>
     );
 }
