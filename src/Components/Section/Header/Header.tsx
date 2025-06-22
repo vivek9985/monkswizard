@@ -100,7 +100,7 @@ const Header = () => {
                                                     }
                                                 }}
                                                 className={`flex items-center justify-center group gap-1 ${
-                                                    pathname === `/${item?.link}` ? "text-success-500" : ""
+                                                   (pathname === `/${item?.link}`) ? "text-success-500" : ""
                                                 }`}
                                                 >
                                                 <span>{item?.nav_item}</span>
@@ -124,15 +124,12 @@ const Header = () => {
                                                         >
                                                             <span
                                                                 onClick={() => router.push(`/${subItem?.link}`)}
-                                                                className="group relative cursor-pointer text-primary-800 hover:text-success-500"
+                                                                className={`group relative cursor-pointer text-primary-800 hover:text-success-500 ${
+                                                                pathname === `/${subItem?.link}` ? "text-success-500" : ""
+                                                                }`}
                                                             >
                                                                 {subItem?.nav_item}
                                                             </span>
-                                                            {subItem?.nested_sub_item && (
-                                                                <span className="translate-y-[1px] duration-500">
-                                                                    <RiArrowDownSLine />
-                                                                </span>
-                                                            )}
                                                         </span>
                                                     </li>
                                                 ))}
