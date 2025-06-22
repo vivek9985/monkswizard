@@ -14,7 +14,7 @@ export default function Footer() {
     const pathname = usePathname()
     const year = new Date(Date.now()).getFullYear()
     return (
-        <section className="bg-primary-700 pt-[60px]">
+        <footer className="bg-primary-700 pt-[60px]">
             <Container className={`${(pathname === "/404") ? "hidden" : "block"}`}>
                 <div className="w-10/12 sm:w-7/12 md:w-7/12 lg:w-8/12 xl:max-w-[718px] mx-auto">
                     <Heading variant="h2" className="text-white text-center">
@@ -205,6 +205,6 @@ export default function Footer() {
                     </Paragraph>
                 </div>
             </Container>
-        </section>
+        </footer>
     );
 }
