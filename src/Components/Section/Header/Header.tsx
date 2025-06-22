@@ -29,7 +29,6 @@ interface TmainNav {
 const mainNav: TmainNav[] = [
     {
         nav_item: "Home",
-        link: "/",
         sub_item: [
             { nav_item: "Home 01", link: "/" },
             { nav_item: "Home 02", link: "home-2" },
@@ -37,13 +36,9 @@ const mainNav: TmainNav[] = [
     },
     {
         nav_item: "Pages",
-        link: "/",
         sub_item: [
             { nav_item: "About Us", link: "about" },
-            {
-                nav_item: "Case Study",
-                link: "case-study",
-            },
+            { nav_item: "Case Study", link: "case-study"},
             { nav_item: "Faq", link: "faq" },
             { nav_item: "Privacy", link: "privacy" },
             { nav_item: "Terms", link: "terms" },
@@ -97,17 +92,25 @@ const Header = () => {
                         </div>
                         <nav className="hidden lg:flex items-center gap-8">
                             <ul className="flex items-center justify-center gap-6 xl:gap-8 text-[16px] leading-[150%] font-[family-name:var(--font-outfit)] font-normal">
-                                {mainNav.map((item, index) => (
+                                {mainNav?.map((item, index) => (
                                     <li key={index} className={`relative group py-2  cursor-pointer hover:text-success-500 ${(pathname === "/" || pathname === "/about" || pathname === "/case-study" || pathname === "/faq" || pathname === "/privacy" || pathname === "/terms" || pathname === "/case-study" || pathname === "/services" || pathname === "/blog" || pathname === "/contact") ? "text-neutral-300" : "text-neutral-700"}`}>
-                                        <span onClick={() => router.push(`/${item?.link}`)} className="flex items-center justify-center group gap-1">
+                                            <span onClick={() => {
+                                                    if (item?.link) {
+                                                    router.push(`/${item.link}`);
+                                                    }
+                                                }}
+                                                className={`flex items-center justify-center group gap-1 ${
+                                                    pathname === `/${item?.link}` ? "text-success-500" : ""
+                                                }`}
+                                                >
+                                                <span>{item?.nav_item}</span>
 
-                                            <span>{item?.nav_item}</span>
-                                            {item?.sub_item && (
-                                                <span className="translate-y-[1.5px] group-hover:rotate-180 duration-500">
+                                                {item?.sub_item && (
+                                                    <span className="translate-y-[1.5px] group-hover:rotate-180 duration-500">
                                                     <RiArrowDownSLine />
-                                                </span>
-                                            )}
-                                        </span>
+                                                    </span>
+                                                )}
+                                            </span>
                                         {item?.sub_item && (
                                             <ul className="absolute left-0 invisible mt-2 p-5 bg-neutral-100 rounded-xl w-[180px] shadow-lg group-hover:visible flex flex-col gap-3 opacity-0 translate-y-10 group-hover:translate-y-2 group-hover:opacity-100 transition-all duration-500 ease-in-out z-20 border-b-[4px] border-success-500 cursor-default">
                                                 <div className="w-4 h-4 bg-neutral-100 rotate-45 absolute left-4 -top-1.5"></div>
