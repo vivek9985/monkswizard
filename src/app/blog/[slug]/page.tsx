@@ -13,17 +13,13 @@ import Container from "@/Components/Utils/Container/Container";
 import BlogWidget from "@/Components/Widget/BlogWidget";
 import Data from "@/db/data.json";
 
-
-
 export const metadata: Metadata = {
     title: "MonksWizard - Blog Details",
 };
 
-
-
 export default function BlogDetailsPage() {
     return (
-        <section className="py-26 md:py-32 xl:pt-[160px] xl:pb-[110px] px-4 xl:px-0">
+        <main className="py-26 md:py-32 xl:pt-[160px] xl:pb-[110px] px-4 xl:px-0">
             <div className="max-w-[800px] mx-auto">
                 <Badge variant="light" className="mx-auto md:ml-0">February 10, 2024</Badge>
                 <Heading variant="h2" className="mt-3 mb-9 md:mb-12 text-center md:text-left">A Marketing Campaign Based on Experiential Learning</Heading>
@@ -119,6 +115,6 @@ export default function BlogDetailsPage() {
                     }
                 </div>
             </Container>
-        </section>
+        </main>
     );
 }
