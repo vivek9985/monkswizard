@@ -46,7 +46,7 @@ export default function Video() {
     };
 
     return (
-        <div className="w-full relative">
+        <section className="w-full relative">
             <video
                 ref={videoRef}
                 className="w-full cursor-pointer"
@@ -76,6 +76,6 @@ export default function Video() {
                     />
                 </button>
             )}
-        </div>
+        </section>
     );
 }
